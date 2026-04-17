@@ -9,7 +9,7 @@ const itineraryData = {
         ],
         timeline: [
             { time: "19:10", activity: "BCN 공항 도착 (Asiana/T'way)", desc: "직항 항공편(OZ511/TW407) 도착 기준", link: "https://m.flyasiana.com/C/KR/KO/index" },
-            { time: "20:30", activity: "공항 -> 시내 이동", desc: "도착 후 피로도를 고려하여 **Uber Reserve** 이용 (한국어 앱 지원)", link: "https://www.uber.com/kr/ko/u/reserve-trips/" },
+            { time: "20:30", activity: "공항 -> 시내 이동", desc: "도착 후 피로도를 고려하여 **마이리얼트립 공항 픽업 서비스** 이용 (한국인 기사 배정 등)", link: "https://www.myrealtrip.com/search?q=%EB%B0%94%EB%A5%B4%EC%85%80%EB%A1%9C%EB%82%98%20%EA%B3%B5%ED%95%AD%20%ED%94%BD%EC%97%85" },
             { time: "21:30", activity: "호텔 체크인 및 늦은 저녁", desc: "H10 Casa Mimosa 체크인 및 호텔 인근 테라스 바에서 카바(Cava) 한 잔" }
         ],
         dining: [
@@ -17,7 +17,7 @@ const itineraryData = {
             { name: "Solraig", type: "Modern", desc: "깔끔하고 세련된 지중해식 요리." }
         ],
         costs: [
-            { item: "교통비 (공항-시내/Uber 1대)", krw: "52,500원" },
+            { item: "교통비 (마이리얼트립 픽업 서비스)", krw: "85,000원" },
             { item: "호텔 인근 석식 (2인)", krw: "75,000원" }
         ]
     },
@@ -155,7 +155,7 @@ const itineraryData = {
         timeline: [
             { time: "09:00", activity: "바르셀로네타 해변", desc: "아침 바다 산책 및 마지막 여유" },
             { time: "11:00", activity: "피날레 빠에야", desc: "7포르테스 등 해변 유명 맛집에서 마지막 오찬" },
-            { time: "13:30", activity: "공항 이동", desc: "BCN 공항 T1으로 향하는 우버 이동", link: "https://www.uber.com/kr/ko/u/reserve-trips/" }
+            { time: "13:30", activity: "공항 이동", desc: "BCN 공항 T1으로 향하는 마이리얼트립 프라이빗 샌딩 서비스 이용", link: "https://www.myrealtrip.com/search?q=%EB%B0%94%EB%A5%B4%EC%85%80%EB%A1%9C%EB%82%98%20%EA%B3%B5%ED%95%AD%20%ED%94%BD%EC%97%85" }
         ],
         dining: [
             { name: "7 Portes", type: "Classical", desc: "바르셀로나의 마지막을 장식할 정통 빠에야 식당." },
@@ -163,7 +163,7 @@ const itineraryData = {
         ],
         costs: [
             { item: "마지막 만찬 (2인)", krw: "150,000원" },
-            { item: "공항 이동 택시비", krw: "45,000원" }
+            { item: "마이리얼트립 공항 샌딩비", krw: "85,000원" }
         ]
     }
 };
