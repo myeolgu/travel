@@ -26,18 +26,22 @@ const itineraryData = {
         title: "Day 02: Gaudi's Dream",
         subtitle: "2027년 4월 19일 - 가우디 걸작 투어",
         coords: [
+            { name: "H10 Casa Mimosa (출발)", lat: 41.3963, lon: 2.1614 },
             { name: "Sagrada Familia", lat: 41.4036, lon: 2.1744 },
             { name: "Eixample (점심)", lat: 41.3950, lon: 2.1620 },
             { name: "Casa Batllo", lat: 41.3916, lon: 2.1649 },
             { name: "Park Guell", lat: 41.4145, lon: 2.1527 },
-            { name: "Cervecería Catalana (석식)", lat: 41.3925, lon: 2.1606 }
+            { name: "Cervecería Catalana (석식)", lat: 41.3925, lon: 2.1606 },
+            { name: "H10 Casa Mimosa (도착)", lat: 41.3963, lon: 2.1614 }
         ],
         timeline: [
+            { time: "08:20", activity: "숙소 출발", desc: "H10 Casa Mimosa에서 1일차 여행 시작" },
             { time: "09:00", activity: "사그라다 파밀리아", desc: "예약 필수! 가우디 걸작 (마이리얼트립 인기 상품)", link: "https://experiences.myrealtrip.com/products/5846829" },
             { time: "12:30", activity: "점심 식사 (Eixample)", desc: "현지식 Menú del día 즐기기" },
             { time: "14:30", activity: "카사 바트요", desc: "그라시아 거리의 대표 모더니즘 건축 (마이리얼트립)", link: "https://experiences.myrealtrip.com/products/3410190" },
             { time: "17:00", activity: "구엘 공원", desc: "독특한 타일 장식과 바르셀로나 전경 (가우디 투어)", link: "https://experiences.myrealtrip.com/products/3410190" },
-            { time: "20:00", activity: "석식 (빠에야)", desc: "바르셀로나 대표 메뉴로 하루 마무리" }
+            { time: "20:00", activity: "석식 (빠에야)", desc: "바르셀로나 대표 메뉴로 하루 마무리" },
+            { time: "22:00", activity: "숙소 복귀 및 휴식", desc: "H10 Casa Mimosa 도착 및 재정비" }
         ],
         dining: [
             { name: "Cervecería Catalana", type: "Tapas", desc: "현지인과 관광객 모두에게 사랑받는 타파스 끝판왕." },
@@ -53,20 +57,24 @@ const itineraryData = {
         title: "Day 03: Sacred Mountain & Coastal Breeze",
         subtitle: "2027년 4월 20일 - 몬세라트 & 시체스 투어",
         coords: [
+            { name: "H10 Casa Mimosa (출발)", lat: 41.3963, lon: 2.1614 },
             { name: "Placa Catalunya (미팅)", lat: 41.3851, lon: 2.1734 },
             { name: "Montserrat", lat: 41.5933, lon: 1.8361 },
             { name: "Montserrat (자유시간 및 중식)", lat: 41.5890, lon: 1.8340 },
             { name: "Sitges", lat: 41.2333, lon: 1.8105 },
             { name: "Sitges Beach", lat: 41.2355, lon: 1.8080 },
-            { name: "Placa Catalunya (도착)", lat: 41.3851, lon: 2.1734 }
+            { name: "Placa Catalunya (도착)", lat: 41.3851, lon: 2.1734 },
+            { name: "H10 Casa Mimosa (도착)", lat: 41.3963, lon: 2.1614 }
         ],
         timeline: [
+            { time: "07:50", activity: "숙소 출발", desc: "H10 Casa Mimosa에서 미팅 장소로 이동" },
             { time: "08:20", activity: "미팅 및 출발", desc: "카탈루냐 광장 부근 미팅 (마이리얼트립)", link: "https://experiences.myrealtrip.com/products/3517343" },
             { time: "10:00", activity: "몬세라트 수도원", desc: "수도원 관람 및 검은 성모 마리아상 (가이드 동행)" },
             { time: "12:30", activity: "자유 시간 및 중식", desc: "산 조안 푸니쿨라 탑승 또는 하이킹 가능", link: "https://experiences.myrealtrip.com/products/3517343" },
             { time: "14:30", activity: "시체스(Sitges) 이동", desc: "아름다운 휴양지 시체스로 이동" },
             { time: "15:30", activity: "시체스 관람", desc: "해변 산책 및 드라마 '푸른 바다의 전설' 촬영지 탐방" },
-            { time: "17:30", activity: "시내 복귀 및 하차", desc: "카탈루냐 광장 부근 도착 후 여정 마무리" }
+            { time: "17:30", activity: "시내 복귀 및 하차", desc: "카탈루냐 광장 부근 도착 후 여정 마무리" },
+            { time: "18:20", activity: "숙소 복귀 및 휴식", desc: "안전하게 숙소 복귀" }
         ],
         dining: [
             { name: "La Fragata", type: "Seafood", desc: "시체스 성당이 보이는 환상적인 뷰의 해산물 전문점." },
@@ -83,16 +91,20 @@ const itineraryData = {
         title: "Day 04: Art & View",
         subtitle: "2027년 4월 21일 - 몬주익 문화 탐방",
         coords: [
+            { name: "H10 Casa Mimosa (출발)", lat: 41.3963, lon: 2.1614 },
             { name: "Montjuic Teleferic", lat: 41.3703, lon: 2.1670 },
             { name: "MNAC", lat: 41.3686, lon: 2.1534 },
             { name: "Miro Museum", lat: 41.3639, lon: 2.1598 },
-            { name: "Magic Fountain", lat: 41.3712, lon: 2.1518 }
+            { name: "Magic Fountain", lat: 41.3712, lon: 2.1518 },
+            { name: "H10 Casa Mimosa (도착)", lat: 41.3963, lon: 2.1614 }
         ],
         timeline: [
+            { time: "09:10", activity: "숙소 출발", desc: "몬주익 케이블카 탑승장으로 이동" },
             { time: "10:00", activity: "몬주익 케이블카", desc: "바다와 시내를 동시에 내려다보는 파노라마 (마이리얼트립)", link: "https://experiences.myrealtrip.com/products/5868095" },
             { time: "12:00", activity: "카탈루냐 미술관 (MNAC)", desc: "로마네스크 벽화의 보물창고 (마이리얼트립)", link: "https://experiences.myrealtrip.com/products/5820422" },
             { time: "16:00", activity: "미로 미술관", desc: "호안 미로의 강렬한 원초적 예술 (마이리얼트립)", link: "https://www.myrealtrip.com/offers/26724" },
-            { time: "20:00", activity: "매직 분수 쇼", desc: "몬주익 언덕 아래에서 펼쳐지는 빛의 공연" }
+            { time: "20:00", activity: "매직 분수 쇼", desc: "몬주익 언덕 아래에서 펼쳐지는 빛의 공연" },
+            { time: "21:30", activity: "택시 탑승 및 숙소 복귀", desc: "쇼 관람 후 쾌적하게 택시로 복귀" }
         ],
         dining: [
             { name: "Terraza Martínez", type: "Paella", desc: "몬주익 언덕 위, 환상적인 항구 전망과 빠에야로 유명." },
@@ -108,16 +120,20 @@ const itineraryData = {
         title: "Day 05: Shopping Therapy",
         subtitle: "2027년 4월 22일 - 에이샴플레 & 그라시아",
         coords: [
+            { name: "H10 Casa Mimosa (출발)", lat: 41.3963, lon: 2.1614 },
             { name: "Passeig de Gràcia", lat: 41.3916, lon: 2.1649 },
             { name: "Boqueria Market", lat: 41.3817, lon: 2.1714 },
             { name: "Gracia District", lat: 41.4031, lon: 2.1572 },
-            { name: "Ciudad Condal (칵테일)", lat: 41.3887, lon: 2.1666 }
+            { name: "Ciudad Condal (칵테일)", lat: 41.3887, lon: 2.1666 },
+            { name: "H10 Casa Mimosa (도착)", lat: 41.3963, lon: 2.1614 }
         ],
         timeline: [
+            { time: "09:50", activity: "숙소 출발", desc: "도보로 명품 거리 이동" },
             { time: "10:00", activity: "파세이그 드 그라시아", desc: "명품 쇼핑 및 윈도우 쇼핑" },
             { time: "13:00", activity: "보케리아 시장 인근 중식", desc: "다양한 신선 식재료와 활기찬 시장 분위기" },
             { time: "15:00", activity: "그라시아 지구", desc: "힙한 브런치 카페와 소품샵 탐방" },
-            { time: "20:00", activity: "여유로운 칵테일 바", desc: "현지인들처럼 타파스와 cocktail 즐기기" }
+            { time: "20:00", activity: "여유로운 칵테일 바", desc: "현지인들처럼 타파스와 cocktail 즐기기" },
+            { time: "22:30", activity: "숙소 복귀", desc: "H10 Casa Mimosa 도착 및 휴식" }
         ],
         dining: [
             { name: "Ciudad Condal (시우다드 콘달)", type: "Tapas", desc: "언제나 북적이는 바르셀로나 최고의 타파스 명소." },
@@ -157,11 +173,13 @@ const itineraryData = {
         title: "Day 07: Adios Bcn",
         subtitle: "2027년 4월 24일 - 마지막 지중해",
         coords: [
+            { name: "Majestic Hotel (출발)", lat: 41.3920, lon: 2.1645 },
             { name: "Barceloneta Beach", lat: 41.3784, lon: 2.1925 },
             { name: "7 Portes", lat: 41.3820, lon: 2.1834 },
             { name: "BCN Airport", lat: 41.2974, lon: 2.0833 }
         ],
         timeline: [
+            { time: "08:30", activity: "숙소 체크아웃", desc: "Majestic Hotel 체크아웃 및 짐 보관 메세지 작성" },
             { time: "09:00", activity: "바르셀로네타 해변", desc: "아침 바다 산책 및 마지막 여유" },
             { time: "11:00", activity: "피날레 빠에야", desc: "7포르테스 등 해변 유명 맛집에서 마지막 오찬" },
             { time: "13:30", activity: "공항 이동", desc: "BCN 공항 T1으로 향하는 마이리얼트립 프라이빗 샌딩 서비스 이용", link: "https://www.myrealtrip.com/search?q=%EB%B0%94%EB%A5%B4%EC%85%80%EB%A1%9C%EB%82%98%20%EA%B3%B5%ED%95%AD%20%ED%94%BD%EC%97%85" }
