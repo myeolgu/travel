@@ -185,8 +185,9 @@ function openDayModal(day) {
     
     
 
-    let timelineHTML = data.timeline.map(item => `
-        <div class="timeline-item">
+    const cssHEX = ['#cb2b3e', '#2a81cb', '#2aad27', '#cb8427', '#9c2bc1', '#ffd326'];
+    let timelineHTML = data.timeline.map((item, idx) => `
+        <div class="timeline-item" style="--dot-color: ${cssHEX[idx % cssHEX.length]}">
             <span class="time">${item.time}</span>
             <div class="activity">
                 <strong>${item.activity}</strong>
@@ -268,8 +269,15 @@ function initMap(coords) {
         attribution: '© OpenStreetMap contributors'
     }).addTo(activeMap);
 
-    const latlngs = coords.map(c => {
-        L.marker([c.lat, c.lon]).addTo(activeMap).bindPopup(c.name);
+    const markerColors = ['red', 'blue', 'green', 'orange', 'violet', 'gold'];
+    const latlngs = coords.map((c, idx) => {
+        const color = markerColors[idx % markerColors.length];
+        const customIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-' + color + '.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
+        });
+        L.marker([c.lat, c.lon], {icon: customIcon}).addTo(activeMap).bindPopup(`<b>${idx + 1}.</b> ${c.name}`);
         return [c.lat, c.lon];
     });
 
@@ -405,7 +413,12 @@ function initGlobalMap() {
     ];
 
     locations.forEach(loc => {
-        L.marker([loc.lat, loc.lon]).addTo(map).bindPopup(`<b>${loc.name}</b>`);
+        const customIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-' + (loc.color || 'blue') + '.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
+        });
+        L.marker([loc.lat, loc.lon], {icon: customIcon}).addTo(map).bindPopup(`<b>${loc.name}</b>`);
     });
 }
 document.addEventListener('DOMContentLoaded', initGlobalMap);
