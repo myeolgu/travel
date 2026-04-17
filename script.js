@@ -5,6 +5,7 @@ const itineraryData = {
         subtitle: "2027년 4월 18일 - 도착 및 휴식",
         coords: [
             { name: "BCN Airport", lat: 41.2974, lon: 2.0833 },
+            { name: "시내 이동 중 (Placa Espanya)", lat: 41.3749, lon: 2.1487 },
             { name: "H10 Casa Mimosa", lat: 41.3963, lon: 2.1614 }
         ],
         timeline: [
@@ -26,8 +27,10 @@ const itineraryData = {
         subtitle: "2027년 4월 19일 - 가우디 걸작 투어",
         coords: [
             { name: "Sagrada Familia", lat: 41.4036, lon: 2.1744 },
+            { name: "Eixample (점심)", lat: 41.3950, lon: 2.1620 },
             { name: "Casa Batllo", lat: 41.3916, lon: 2.1649 },
-            { name: "Park Guell", lat: 41.4145, lon: 2.1527 }
+            { name: "Park Guell", lat: 41.4145, lon: 2.1527 },
+            { name: "Cervecería Catalana (석식)", lat: 41.3925, lon: 2.1606 }
         ],
         timeline: [
             { time: "09:00", activity: "사그라다 파밀리아", desc: "예약 필수! 가우디 걸작 (마이리얼트립 인기 상품)", link: "https://experiences.myrealtrip.com/products/5846829" },
@@ -50,9 +53,12 @@ const itineraryData = {
         title: "Day 03: Sacred Mountain & Coastal Breeze",
         subtitle: "2027년 4월 20일 - 몬세라트 & 시체스 투어",
         coords: [
-            { name: "Placa de Catalunya", lat: 41.3851, lon: 2.1734 },
+            { name: "Placa Catalunya (미팅)", lat: 41.3851, lon: 2.1734 },
             { name: "Montserrat", lat: 41.5933, lon: 1.8361 },
-            { name: "Sitges", lat: 41.2333, lon: 1.8105 }
+            { name: "Montserrat (자유시간 및 중식)", lat: 41.5890, lon: 1.8340 },
+            { name: "Sitges", lat: 41.2333, lon: 1.8105 },
+            { name: "Sitges Beach", lat: 41.2355, lon: 1.8080 },
+            { name: "Placa Catalunya (도착)", lat: 41.3851, lon: 2.1734 }
         ],
         timeline: [
             { time: "08:20", activity: "미팅 및 출발", desc: "카탈루냐 광장 부근 미팅 (마이리얼트립)", link: "https://experiences.myrealtrip.com/products/3517343" },
@@ -79,7 +85,8 @@ const itineraryData = {
         coords: [
             { name: "Montjuic Teleferic", lat: 41.3703, lon: 2.1670 },
             { name: "MNAC", lat: 41.3686, lon: 2.1534 },
-            { name: "Miro Museum", lat: 41.3639, lon: 2.1598 }
+            { name: "Miro Museum", lat: 41.3639, lon: 2.1598 },
+            { name: "Magic Fountain", lat: 41.3712, lon: 2.1518 }
         ],
         timeline: [
             { time: "10:00", activity: "몬주익 케이블카", desc: "바다와 시내를 동시에 내려다보는 파노라마 (마이리얼트립)", link: "https://experiences.myrealtrip.com/products/5868095" },
@@ -103,7 +110,8 @@ const itineraryData = {
         coords: [
             { name: "Passeig de Gràcia", lat: 41.3916, lon: 2.1649 },
             { name: "Boqueria Market", lat: 41.3817, lon: 2.1714 },
-            { name: "Gracia District", lat: 41.4031, lon: 2.1572 }
+            { name: "Gracia District", lat: 41.4031, lon: 2.1572 },
+            { name: "Ciudad Condal (칵테일)", lat: 41.3887, lon: 2.1666 }
         ],
         timeline: [
             { time: "10:00", activity: "파세이그 드 그라시아", desc: "명품 쇼핑 및 윈도우 쇼핑" },
@@ -126,6 +134,7 @@ const itineraryData = {
         coords: [
             { name: "H10 Casa Mimosa", lat: 41.3963, lon: 2.1614 },
             { name: "Placa de Catalunya", lat: 41.3851, lon: 2.1734 },
+            { name: "Gothic Quarter (점심)", lat: 41.3825, lon: 2.1769 },
             { name: "Majestic Hotel", lat: 41.3920, lon: 2.1645 }
         ],
         timeline: [
@@ -422,6 +431,33 @@ function initGlobalMap() {
     });
 }
 document.addEventListener('DOMContentLoaded', initGlobalMap);
+
+// Hotel Map Init
+function initHotelMap() {
+    const mapContainer = document.getElementById('hotel-map-container');
+    if (!mapContainer) return;
+    
+    // Zoom slightly out to cover both central properties nicely
+    const map = L.map('hotel-map-container').setView([41.3940, 2.1630], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    const locations = [
+        { lat: 41.3963, lon: 2.1614, name: "H10 Casa Mimosa", color: "blue" },
+        { lat: 41.3920, lon: 2.1645, name: "Majestic Hotel & Spa", color: "gold" }
+    ];
+
+    locations.forEach(loc => {
+        const customIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-' + loc.color + '.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+            iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
+        });
+        L.marker([loc.lat, loc.lon], {icon: customIcon}).addTo(map).bindPopup(`<b>${loc.name}</b>`);
+    });
+}
+document.addEventListener('DOMContentLoaded', initHotelMap);
 
 // Budget Customization Toggle
 function updateTotalBudget(checkbox) {
