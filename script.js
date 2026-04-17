@@ -103,8 +103,8 @@ const itineraryData = {
             { time: "10:00", activity: "몬주익 케이블카", desc: "바다와 시내를 동시에 내려다보는 파노라마 (마이리얼트립)", link: "https://experiences.myrealtrip.com/products/5868095" },
             { time: "12:00", activity: "카탈루냐 미술관 (MNAC)", desc: "로마네스크 벽화의 보물창고 (마이리얼트립)", link: "https://experiences.myrealtrip.com/products/5820422" },
             { time: "16:00", activity: "미로 미술관", desc: "호안 미로의 강렬한 원초적 예술 (마이리얼트립)", link: "https://www.myrealtrip.com/offers/26724" },
-            { time: "20:00", activity: "매직 분수 쇼", desc: "몬주익 언덕 아래에서 펼쳐지는 빛의 공연" },
-            { time: "21:30", activity: "택시 탑승 및 숙소 복귀", desc: "쇼 관람 후 쾌적하게 택시로 복귀" }
+            { time: "20:00", activity: "매직 분수 쇼 (또는 대체 야경)", desc: "몬주익 분수쇼 (현지 가뭄으로 중단 시 고딕 지구 야경 투어로 대체)" },
+            { time: "21:30", activity: "택시 탑승 및 숙소 복귀", desc: "야경 관람 후 쾌적하게 택시로 복귀" }
         ],
         dining: [
             { name: "Terraza Martínez", type: "Paella", desc: "몬주익 언덕 위, 환상적인 항구 전망과 빠에야로 유명." },
@@ -154,7 +154,7 @@ const itineraryData = {
             { name: "Majestic Hotel", lat: 41.3920, lon: 2.1645 }
         ],
         timeline: [
-            { time: "10:00", activity: "체크아웃 및 이동", desc: "H10 Casa Mimosa 체크아웃 및 Majestic Hotel로 이동 (차량 호출)" },
+            { time: "10:00", activity: "체크아웃 및 도보 이동", desc: "H10 Casa Mimosa 체크아웃 및 Majestic Hotel로 이동 (축제 차량 통제 대비 도보 5분 산책)" },
             { time: "11:00", activity: "산 조르디 축제 만끽", desc: "카탈루냐 광장 및 람블라스 거리의 장미와 책 물결" },
             { time: "14:00", activity: "가벼운 거리 점심", desc: "축제 인파를 피해 한적한 골목 맛집 탐방" },
             { time: "20:00", activity: "Majestic Hotel 체크인 및 디너", desc: "축제 당일의 여유로운 파인 다이닝", link: "https://www.agoda.com/ko-kr/search?city=10282" }
@@ -165,8 +165,7 @@ const itineraryData = {
         ],
         costs: [
             { item: "장미/책 구입비 (2인)", krw: "30,000원" },
-            { item: "페스티벌 스페셜 디너 (2인)", krw: "240,000원" },
-            { item: "택시 이동비", krw: "30,000원" }
+            { item: "페스티벌 스페셜 디너 (2인)", krw: "240,000원" }
         ]
     },
     7: {
