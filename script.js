@@ -17,8 +17,8 @@ const itineraryData = {
             { name: "Solraig", type: "Modern", desc: "깔끔하고 세련된 지중해식 요리." }
         ],
         costs: [
-            { item: "교통비 (공항-시내/Uber 1대)", krw: "52,500원", eur: "€35" },
-            { item: "호텔 인근 석식 (2인)", krw: "75,000원", eur: "€50" }
+            { item: "교통비 (공항-시내/Uber 1대)", krw: "52,500원" },
+            { item: "호텔 인근 석식 (2인)", krw: "75,000원" }
         ]
     },
     2: {
@@ -41,9 +41,9 @@ const itineraryData = {
             { name: "El Nacional", type: "Complex", desc: "바르셀로나 최대 규모의 화려한 미식 공간." }
         ],
         costs: [
-            { item: "가우디 3대 명소 입장료 (2인)", krw: "234,000원", eur: "€156" },
-            { item: "식비 (중식+석식/2인)", krw: "150,000원", eur: "€100" },
-            { item: "택시 이동비 (2~3회)", krw: "45,000원", eur: "€30" }
+            { item: "가우디 3대 명소 입장료 (2인)", krw: "234,000원" },
+            { item: "식비 (중식+석식/2인)", krw: "150,000원" },
+            { item: "택시 이동비 (2~3회)", krw: "45,000원" }
         ]
     },
     3: {
@@ -67,10 +67,10 @@ const itineraryData = {
             { name: "Montserrat Cafeteria", type: "Casual", desc: "수도원 인근에서 간단하게 즐기는 현지식 식사." }
         ],
         costs: [
-            { item: "몬세라트+시체스 투어비(2인)", krw: "135,000원", eur: "€90" },
-            { item: "현지 지불 비용 (푸니쿨라 등/2인)", krw: "52,500원", eur: "€35" },
-            { item: "식비 (중식+간식/2인)", krw: "75,000원", eur: "€50" },
-            { item: "석식 (2인)", krw: "90,000원", eur: "€60" }
+            { item: "몬세라트+시체스 투어비(2인)", krw: "135,000원" },
+            { item: "현지 지불 비용 (푸니쿨라 등/2인)", krw: "52,500원" },
+            { item: "식비 (중식+간식/2인)", krw: "75,000원" },
+            { item: "석식 (2인)", krw: "90,000원" }
         ]
     },
     4: {
@@ -92,9 +92,9 @@ const itineraryData = {
             { name: "Xátiva Quinto Pino", type: "Paella", desc: "스페인 광장 인근 현지인 추천 빠에야 맛집." }
         ],
         costs: [
-            { item: "입장료 및 케이블카 (2인)", krw: "120,000원", eur: "€80" },
-            { item: "식비 (2인)", krw: "135,000원", eur: "€90" },
-            { item: "택시비", krw: "30,000원", eur: "€20" }
+            { item: "입장료 및 케이블카 (2인)", krw: "120,000원" },
+            { item: "식비 (2인)", krw: "135,000원" },
+            { item: "택시비", krw: "30,000원" }
         ]
     },
     5: {
@@ -116,8 +116,8 @@ const itineraryData = {
             { name: "Botafumeiro", type: "Seafood", desc: "그라시아 지구의 럭셔리한 해산물 전문점." }
         ],
         costs: [
-            { item: "식비 (식사+간식/2인)", krw: "180,000원", eur: "€120" },
-            { item: "택시비", krw: "15,000원", eur: "€10" }
+            { item: "식비 (식사+간식/2인)", krw: "180,000원" },
+            { item: "택시비", krw: "15,000원" }
         ]
     },
     6: {
@@ -139,9 +139,9 @@ const itineraryData = {
             { name: "7 Portes (7포르테스)", type: "Traditional", desc: "피카소가 방문했던 1836년 전통의 빠에야 명소 (예약 필수)." }
         ],
         costs: [
-            { item: "장미/책 구입비 (2인)", krw: "30,000원", eur: "€20" },
-            { item: "페스티벌 스페셜 디너 (2인)", krw: "240,000원", eur: "€160" },
-            { item: "택시 이동비", krw: "30,000원", eur: "€20" }
+            { item: "장미/책 구입비 (2인)", krw: "30,000원" },
+            { item: "페스티벌 스페셜 디너 (2인)", krw: "240,000원" },
+            { item: "택시 이동비", krw: "30,000원" }
         ]
     },
     7: {
@@ -162,8 +162,8 @@ const itineraryData = {
             { name: "Can Majó", type: "Seafood", desc: "바르셀로네타 해변 바로 앞, 신선한 해산물이 가득한 곳." }
         ],
         costs: [
-            { item: "마지막 만찬 (2인)", krw: "150,000원", eur: "€100" },
-            { item: "공항 이동 택시비", krw: "45,000원", eur: "€30" }
+            { item: "마지막 만찬 (2인)", krw: "150,000원" },
+            { item: "공항 이동 택시비", krw: "45,000원" }
         ]
     }
 };
@@ -183,10 +183,7 @@ function openDayModal(day) {
         return acc + (isNaN(priceValue) ? 0 : parseFloat(priceValue));
     }, 0);
     
-    let totalEuro = data.costs.reduce((acc, current) => {
-        let priceValue = current.eur.replace('€', '').replace(/,/g, '').trim();
-        return acc + (isNaN(priceValue) ? 0 : parseFloat(priceValue));
-    }, 0);
+    
 
     let timelineHTML = data.timeline.map(item => `
         <div class="timeline-item">
@@ -203,7 +200,7 @@ function openDayModal(day) {
         <tr>
             <td>${cost.item}</td>
             <td style="color: var(--secondary); font-weight: 700;">${cost.krw}</td>
-            <td style="font-size: 0.8rem; color: var(--text-light); text-align: right;">${cost.eur}</td>
+            
         </tr>
     `).join('');
 
@@ -231,14 +228,14 @@ function openDayModal(day) {
                 <h3>예상 소요 경비 (2인 합계)</h3>
                 <table class="cost-table">
                     <thead>
-                        <tr><th>항목</th><th>KRW (원)</th><th style="text-align: right;">EUR</th></tr>
+                        <tr><th>항목</th><th>KRW (원)</th></tr>
                     </thead>
                     <tbody>
                         ${costsHTML}
                         <tr class="total-row">
                             <td>합계 (약)</td>
                             <td style="color: var(--primary);">₩${totalKRW.toLocaleString()}</td>
-                            <td style="font-size: 0.9rem; text-align: right;">€${totalEuro}</td>
+                            
                         </tr>
                     </tbody>
                 </table>

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barcelona April 2027 | Premium Travel Analysis</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Leaflet.js for Maps -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
+
 <body>
 
     <!-- Hero Section -->
@@ -19,7 +23,7 @@
             <i>The Ultimate Mediterranean Experience</i>
             <h1>Barcelona '27</h1>
             <p>2027년 4월 18일 — 4월 24일 | 6박 7일 프리미엄 여정 분석</p>
-            
+
             <div class="countdown" id="countdown">
                 <div class="countdown-item"><span id="days">000</span><label>Days</label></div>
                 <div class="countdown-item"><span id="hours">00</span><label>Hours</label></div>
@@ -34,16 +38,20 @@
             <h2>Flight Insights</h2>
             <p>서울(ICN) 출발 바르셀로나(BCN) 직항 노선 분석</p>
         </div>
-        
+
         <div class="flight-grid">
             <!-- Asiana -->
             <div class="flight-card" onclick="openFlightSearch()">
                 <div class="airline-logo">✈ Asiana Airlines</div>
                 <div class="status-label">전통의 베스트셀러</div>
                 <div class="flight-route">
-                    <div class="route-node"><h3>ICN</h3><span>Incheon</span></div>
+                    <div class="route-node">
+                        <h3>ICN</h3><span>Incheon</span>
+                    </div>
                     <div class="route-line"></div>
-                    <div class="route-node"><h3>BCN</h3><span>Barcelona</span></div>
+                    <div class="route-node">
+                        <h3>BCN</h3><span>Barcelona</span>
+                    </div>
                 </div>
                 <p>소요 시간: 약 14시간 20분</p>
                 <div class="price-tag">₩3,500,000~</div>
@@ -55,9 +63,13 @@
                 <div class="airline-logo">✈ T'way Air</div>
                 <div class="status-label">합리적인 프리미엄</div>
                 <div class="flight-route">
-                    <div class="route-node"><h3>ICN</h3><span>Incheon</span></div>
+                    <div class="route-node">
+                        <h3>ICN</h3><span>Incheon</span>
+                    </div>
                     <div class="route-line"></div>
-                    <div class="route-node"><h3>BCN</h3><span>Barcelona</span></div>
+                    <div class="route-node">
+                        <h3>BCN</h3><span>Barcelona</span>
+                    </div>
                 </div>
                 <p>소요 시간: 약 14시간 40분</p>
                 <div class="price-tag">₩2,760,000~</div>
@@ -65,13 +77,16 @@
             </div>
         </div>
 
-        <div class="logistics-alert" style="background: #e3f2fd; padding: 15px; border-radius: 12px; margin-top: 20px; border-left: 4px solid var(--primary); font-size: 0.9rem;">
-            <strong>🚕 에이전트 분석 팁:</strong> 19:10 도착 시의 편의를 위해 <strong>Uber Reserve(사전 예약)</strong>를 이용하세요. 모든 투어는 <strong>마이리얼트립</strong> 등 한국 사이트 예약을 권장하며, 예약 시기 가이드를 참고하세요.
+        <div class="logistics-alert"
+            style="background: #e3f2fd; padding: 15px; border-radius: 12px; margin-top: 20px; border-left: 4px solid var(--primary); font-size: 0.9rem;">
+            <strong>🚕 에이전트 분석 팁:</strong> 공항 도착 시 <strong>마이리얼트립 픽업 서비스</strong>를 이용하면 숙소까지 편안하게 이동할 수 있습니다. 모든 투어도 <strong>마이리얼트립</strong> 예약을 권장하며, 예약 시기 가이드를 참고하세요.
         </div>
 
         <div style="text-align: center; margin-top: 40px;">
-            <a href="https://www.skyscanner.co.kr/transport/flights/icn/bcn/270418/270424/" target="_blank" class="brand-btn skyscanner">
-                <img src="https://www.skyscanner.net/images/favicon.ico" alt="Skyscanner" style="width: 20px; vertical-align: middle; margin-right: 10px;">
+            <a href="https://www.skyscanner.co.kr/transport/flights/icn/bcn/270418/270424/" target="_blank"
+                class="brand-btn skyscanner">
+                <img src="https://www.skyscanner.net/images/favicon.ico" alt="Skyscanner"
+                    style="width: 20px; vertical-align: middle; margin-right: 10px;">
                 스카이스캐너에서 최저가 검색하기
             </a>
         </div>
@@ -83,7 +98,7 @@
             <h2>Stay Strategy</h2>
             <p>현명한 연박과 최고의 하루를 위한 숙소 분할 전략</p>
         </div>
-        
+
         <div class="hotel-grid">
             <div class="hotel-card">
                 <div class="status-label">4월 18일 - 23일 (5박)</div>
@@ -103,8 +118,10 @@
         </div>
 
         <div style="text-align: center; margin-top: 40px;">
-            <a href="https://www.agoda.com/ko-kr/search?city=10282&checkIn=2027-04-18&checkOut=2027-04-24" target="_blank" class="brand-btn agoda">
-                <img src="https://www.agoda.com/favicon.ico" alt="Agoda" style="width: 20px; vertical-align: middle; margin-right: 10px;">
+            <a href="https://www.agoda.com/ko-kr/search?city=10282&checkIn=2027-04-18&checkOut=2027-04-24"
+                target="_blank" class="brand-btn agoda">
+                <img src="https://www.agoda.com/favicon.ico" alt="Agoda"
+                    style="width: 20px; vertical-align: middle; margin-right: 10px;">
                 아고다에서 바르셀로나 숙소 검색하기
             </a>
         </div>
@@ -128,7 +145,9 @@
         <div class="itinerary-timeline" id="timeline">
             <!-- Day 1 -->
             <div class="itinerary-day" onclick="openDayModal(1)">
-                <div class="day-number"><h4>01</h4><span>APR 18</span></div>
+                <div class="day-number">
+                    <h4>01</h4><span>APR 18</span>
+                </div>
                 <div class="day-content">
                     <h3>Hola Barcelona</h3>
                     <p>도착 및 체크인. 장시간 비행 후의 여독을 풀기 위해 호텔 인근 테라스 바에서 가벼운 타파스와 카바(Cava)를 즐깁니다.</p>
@@ -137,24 +156,22 @@
             </div>
 
             <!-- Day 2 -->
-            <div class="itinerary-day" onclick="openDayModal(2)">
-                <div class="day-number"><h4>02</h4><span>APR 19</span></div>
-                <div class="day-content">
-            <!-- Day 2 -->
             <div class="itinerary-day" id="day2-card" onclick="openDayModal(2)">
-                <div class="day-number"><h4>02</h4><span>APR 19</span></div>
+                <div class="day-number">
+                    <h4>02</h4><span>APR 19</span>
+                </div>
                 <div class="day-content">
                     <h3 id="day2-title">Gaudi's Dream</h3>
                     <p id="day2-desc">사그라다 파밀리아와 구엘 공원 집중 투어. 가우디의 상상력이 현실이 된 공간을 탐험합니다.</p>
                     <span class="click-hint">Click to explore details &rarr;</span>
                 </div>
             </div>
-                </div>
-            </div>
 
             <!-- Day 3 -->
             <div class="itinerary-day" id="day3-card" onclick="openDayModal(3)">
-                <div class="day-number"><h4>03</h4><span>APR 20</span></div>
+                <div class="day-number">
+                    <h4>03</h4><span>APR 20</span>
+                </div>
                 <div class="day-content">
                     <span class="special-badge">Day Trip</span>
                     <h3 id="day3-title">The Sacred Mountain</h3>
@@ -165,7 +182,9 @@
 
             <!-- Day 4 -->
             <div class="itinerary-day" onclick="openDayModal(4)">
-                <div class="day-number"><h4>04</h4><span>APR 21</span></div>
+                <div class="day-number">
+                    <h4>04</h4><span>APR 21</span>
+                </div>
                 <div class="day-content">
                     <h3>Art & View</h3>
                     <p>몬주익 언덕과 미로 미술관. 바르셀로나 시내와 지중해가 한눈에 내려다보이는 뷰포인트를 방문합니다.</p>
@@ -175,7 +194,9 @@
 
             <!-- Day 5 -->
             <div class="itinerary-day" onclick="openDayModal(5)">
-                <div class="day-number"><h4>05</h4><span>APR 22</span></div>
+                <div class="day-number">
+                    <h4>05</h4><span>APR 22</span>
+                </div>
                 <div class="day-content">
                     <h3>Shopping Therapy</h3>
                     <p>파세이그 드 그라시아에서 쇼핑. 아름다운 모더니즘 건축물들 사이로 명품 샵들을 둘러보며 여유로운 오후를 보냅니다.</p>
@@ -185,7 +206,9 @@
 
             <!-- Day 6 -->
             <div class="itinerary-day" onclick="openDayModal(6)">
-                <div class="day-number"><h4>06</h4><span>APR 23</span></div>
+                <div class="day-number">
+                    <h4>06</h4><span>APR 23</span>
+                </div>
                 <div class="day-content">
                     <span class="special-badge">Highlight</span>
                     <h3>Sant Jordi's Day</h3>
@@ -196,7 +219,9 @@
 
             <!-- Day 7 -->
             <div class="itinerary-day" onclick="openDayModal(7)">
-                <div class="day-number"><h4>07</h4><span>APR 24</span></div>
+                <div class="day-number">
+                    <h4>07</h4><span>APR 24</span>
+                </div>
                 <div class="day-content">
                     <h3>Adios Bcn</h3>
                     <p>바르셀로네타 해변에서 마지막 브런치. 지중해의 바람을 느끼며 공항으로 향합니다.</p>
@@ -206,45 +231,6 @@
         </div>
     </section>
 
-    <!-- Logistics & Transport -->
-    <section id="logistics" style="background: white;">
-        <div class="section-title">
-            <h2>Logistics & Transport</h2>
-            <p>현지에서 막힘없는 이동을 위한 필수 가이드</p>
-        </div>
-        
-        <div class="logistics-grid">
-            <div class="logistics-card">
-                <div class="icon-box">🚕</div>
-                <h3>Cabify</h3>
-                <p>스페인의 정찰제 차량 호출 앱. 쾌적한 이동과 바가지 걱정 없는 정해진 요금으로 공항 이동에 최적입니다.</p>
-                <div class="app-links">
-                    <span class="badge-app">iOS</span>
-                    <span class="badge-app">Android</span>
-                </div>
-            </div>
-
-            <div class="logistics-card">
-                <div class="icon-box">🚕</div>
-                <h3>FREE NOW</h3>
-                <p>바르셀로나 공식 택시 호출 앱. 가장 빠르게 차량을 수급할 수 있으며, 주소 입력만으로 간편하게 이용하세요.</p>
-                <div class="app-links">
-                    <span class="badge-app">iOS</span>
-                    <span class="badge-app">Android</span>
-                </div>
-            </div>
-
-            <div class="logistics-card">
-                <div class="icon-box">🚕</div>
-                <h3>Uber</h3>
-                <p>전세계 공통 차량 호출 서비스. **Uber Reserve** 기능을 사용해 공항 이동 시 미리 차량을 예약하여 대기 시간을 없앨 수 있습니다.</p>
-                <div class="app-links">
-                    <span class="badge-app">iOS</span>
-                    <span class="badge-app">Android</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Global Dining & Map Section -->
     <section id="global-dining-map" style="background: #fdfcfb;">
@@ -252,10 +238,11 @@
             <h2>Gastronomy & Spots</h2>
             <p>바르셀로나의 미식 하이라이트와 주요 위치</p>
         </div>
-        <div class="dining-map-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+        <div class="dining-map-grid"
+            style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
             <!-- Map -->
             <div id="global-map-container" style="height: 400px; border-radius: 20px; box-shadow: var(--shadow);"></div>
-            
+
             <!-- Dining -->
             <div class="global-dining-list">
                 <div class="dining-card">
@@ -280,10 +267,12 @@
     <!-- Total Budget Summary -->
     <section id="budget-analysis" style="background: var(--primary); color: white; padding: 100px 10%;">
         <div class="section-title">
-            <h2 style="color: white; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 10px;">Total Budget Summary</h2>
+            <h2
+                style="color: white; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 10px;">
+                Total Budget Summary</h2>
             <p style="color: rgba(255,255,255,0.8);">2인 기준 예상 총 여행 경비 분석</p>
         </div>
-        
+
         <div class="budget-main-grid">
             <div class="budget-summary-card">
                 <h3>예상 총 지출 (2인 합계)</h3>
@@ -310,7 +299,7 @@
                     </label>
                 </div>
             </div>
-            
+
             <div class="budget-breakdown">
                 <div class="breakdown-item">
                     <span>항공권 (2인 왕복)</span>
@@ -326,9 +315,11 @@
                 </div>
             </div>
         </div>
-        
-        <div style="margin-top: 50px; background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; font-size: 0.9rem;">
-            <p><strong>💡 분석가 코멘트:</strong> 위 예산은 2027년 예상 물가와 마이리얼트립 베스트셀러 투어 비용을 바탕으로 설계되었습니다. 아시아나 직항 이용 시 약 70~80만원의 추가 예산이 필요하며, 개별 쇼핑 비용은 포함되지 않았습니다.</p>
+
+        <div
+            style="margin-top: 50px; background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; font-size: 0.9rem;">
+            <p><strong>💡 분석가 코멘트:</strong> 위 예산은 2027년 예상 물가와 마이리얼트립 베스트셀러 투어 비용을 바탕으로 설계되었습니다. 아시아나 직항 이용 시 약 70~80만원의
+                추가 예산이 필요하며, 개별 쇼핑 비용은 포함되지 않았습니다.</p>
         </div>
     </section>
 
@@ -365,8 +356,8 @@
             </div>
             <div class="guide-card">
                 <span class="period-badge">D-7 (1주일 전)</span>
-                <h3>레스토랑 & 우버 예약</h3>
-                <p>7포르테스 등 인기 레스토랑 예약 및 우버 리저브 설정을 마무리하세요.</p>
+                <h3>인기 레스토랑 예약</h3>
+                <p>7포르테스 등 인기 레스토랑 예약을 마무리하세요.</p>
             </div>
         </div>
     </div>
@@ -383,4 +374,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
