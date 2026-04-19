@@ -10,7 +10,7 @@ const itineraryData = {
         ],
         timeline: [
             { time: "19:10", activity: "BCN 공항 도착 (Asiana/T'way)", desc: "직항 항공편(OZ511/TW407) 도착 기준", link: "https://m.flyasiana.com/C/KR/KO/index" },
-            { time: "20:30", activity: "공항 -> 시내 이동", desc: "도착 후 피로도를 고려하여 **마이리얼트립 공항 픽업 서비스** 이용 (한국인 기사 배정 등)", link: "https://www.myrealtrip.com/search?q=%EB%B0%94%EB%A5%B4%EC%85%80%EB%A1%9C%EB%82%98%20%EA%B3%B5%ED%95%AD%20%ED%94%BD%EC%97%85" },
+            { time: "20:30", activity: "공항 -> 시내 이동", desc: "도착 후 우버(Uber) 또는 프리나우(FREENOW) 앱을 이용하여 숙소로 이동 (약 42유로)" },
             { time: "21:30", activity: "호텔 체크인 및 늦은 저녁", desc: "H10 Casa Mimosa 체크인 및 호텔 인근 테라스 바에서 카바(Cava) 한 잔" }
         ],
         dining: [
@@ -18,107 +18,13 @@ const itineraryData = {
             { name: "Solraig", type: "Modern", desc: "깔끔하고 세련된 지중해식 요리." }
         ],
         costs: [
-            { item: "교통비 (마이리얼트립 픽업 서비스)", krw: "85,000원" },
+            { item: "공항 -> 시내 이동 (Uber)", krw: "72,576원" },
             { item: "호텔 인근 석식 (2인)", krw: "75,000원" }
         ]
     },
     2: {
-        title: "Day 02: Gaudi's Dream",
-        subtitle: "2027년 4월 19일 - 가우디 걸작 투어",
-        coords: [
-            { name: "H10 Casa Mimosa (출발)", lat: 41.3963, lon: 2.1614 },
-            { name: "Sagrada Familia", lat: 41.4036, lon: 2.1744 },
-            { name: "Eixample (점심)", lat: 41.3950, lon: 2.1620 },
-            { name: "Casa Batllo", lat: 41.3916, lon: 2.1649 },
-            { name: "Park Guell", lat: 41.4145, lon: 2.1527 },
-            { name: "Cervecería Catalana (석식)", lat: 41.3925, lon: 2.1606 },
-            { name: "H10 Casa Mimosa (도착)", lat: 41.3963, lon: 2.1614 }
-        ],
-        timeline: [
-            { time: "08:20", activity: "숙소 출발", desc: "H10 Casa Mimosa에서 1일차 여행 시작" },
-            { time: "09:00", activity: "사그라다 파밀리아", desc: "예약 필수! 가우디 걸작 (마이리얼트립 인기 상품)", link: "https://experiences.myrealtrip.com/products/5846829" },
-            { time: "12:30", activity: "점심 식사 (Eixample)", desc: "현지식 Menú del día 즐기기" },
-            { time: "14:30", activity: "카사 바트요", desc: "그라시아 거리의 대표 모더니즘 건축 (마이리얼트립)", link: "https://experiences.myrealtrip.com/products/3410190" },
-            { time: "17:00", activity: "구엘 공원", desc: "독특한 타일 장식과 바르셀로나 전경 (가우디 투어)", link: "https://experiences.myrealtrip.com/products/3410190" },
-            { time: "20:00", activity: "석식 (빠에야)", desc: "바르셀로나 대표 메뉴로 하루 마무리" },
-            { time: "22:00", activity: "숙소 복귀 및 휴식", desc: "H10 Casa Mimosa 도착 및 재정비" }
-        ],
-        dining: [
-            { name: "Cervecería Catalana", type: "Tapas", desc: "현지인과 관광객 모두에게 사랑받는 타파스 끝판왕." },
-            { name: "El Nacional", type: "Complex", desc: "바르셀로나 최대 규모의 화려한 미식 공간." }
-        ],
-        costs: [
-            { item: "가우디 3대 명소 입장료 (2인)", krw: "234,000원" },
-            { item: "식비 (중식+석식/2인)", krw: "150,000원" },
-            { item: "택시 이동비 (2~3회)", krw: "45,000원" }
-        ]
-    },
-    3: {
-        title: "Day 03: Sacred Mountain & Coastal Breeze",
-        subtitle: "2027년 4월 20일 - 몬세라트 & 시체스 투어",
-        coords: [
-            { name: "H10 Casa Mimosa (출발)", lat: 41.3963, lon: 2.1614 },
-            { name: "Placa Catalunya (미팅)", lat: 41.3851, lon: 2.1734 },
-            { name: "Montserrat", lat: 41.5933, lon: 1.8361 },
-            { name: "Montserrat (자유시간 및 중식)", lat: 41.5890, lon: 1.8340 },
-            { name: "Sitges", lat: 41.2333, lon: 1.8105 },
-            { name: "Sitges Beach", lat: 41.2355, lon: 1.8080 },
-            { name: "Placa Catalunya (도착)", lat: 41.3851, lon: 2.1734 },
-            { name: "H10 Casa Mimosa (도착)", lat: 41.3963, lon: 2.1614 }
-        ],
-        timeline: [
-            { time: "07:50", activity: "숙소 출발", desc: "H10 Casa Mimosa에서 미팅 장소로 이동" },
-            { time: "08:20", activity: "미팅 및 출발", desc: "카탈루냐 광장 부근 미팅 (마이리얼트립)", link: "https://experiences.myrealtrip.com/products/3517343" },
-            { time: "10:00", activity: "몬세라트 수도원", desc: "수도원 관람 및 검은 성모 마리아상 (가이드 동행)" },
-            { time: "12:30", activity: "자유 시간 및 중식", desc: "산 조안 푸니쿨라 탑승 또는 하이킹 가능", link: "https://experiences.myrealtrip.com/products/3517343" },
-            { time: "14:30", activity: "시체스(Sitges) 이동", desc: "아름다운 휴양지 시체스로 이동" },
-            { time: "15:30", activity: "시체스 관람", desc: "해변 산책 및 드라마 '푸른 바다의 전설' 촬영지 탐방" },
-            { time: "17:30", activity: "시내 복귀 및 하차", desc: "카탈루냐 광장 부근 도착 후 여정 마무리" },
-            { time: "18:20", activity: "숙소 복귀 및 휴식", desc: "안전하게 숙소 복귀" }
-        ],
-        dining: [
-            { name: "La Fragata", type: "Seafood", desc: "시체스 성당이 보이는 환상적인 뷰의 해산물 전문점." },
-            { name: "Montserrat Cafeteria", type: "Casual", desc: "수도원 인근에서 간단하게 즐기는 현지식 식사." }
-        ],
-        costs: [
-            { item: "몬세라트+시체스 투어비(2인)", krw: "135,000원" },
-            { item: "현지 지불 비용 (푸니쿨라 등/2인)", krw: "52,500원" },
-            { item: "식비 (중식+간식/2인)", krw: "75,000원" },
-            { item: "석식 (2인)", krw: "90,000원" }
-        ]
-    },
-    4: {
-        title: "Day 04: Art & View",
-        subtitle: "2027년 4월 21일 - 몬주익 문화 탐방",
-        coords: [
-            { name: "H10 Casa Mimosa (출발)", lat: 41.3963, lon: 2.1614 },
-            { name: "Montjuic Teleferic", lat: 41.3703, lon: 2.1670 },
-            { name: "MNAC", lat: 41.3686, lon: 2.1534 },
-            { name: "Miro Museum", lat: 41.3639, lon: 2.1598 },
-            { name: "Magic Fountain", lat: 41.3712, lon: 2.1518 },
-            { name: "H10 Casa Mimosa (도착)", lat: 41.3963, lon: 2.1614 }
-        ],
-        timeline: [
-            { time: "09:10", activity: "숙소 출발", desc: "몬주익 케이블카 탑승장으로 이동" },
-            { time: "10:00", activity: "몬주익 케이블카", desc: "바다와 시내를 동시에 내려다보는 파노라마 (마이리얼트립)", link: "https://experiences.myrealtrip.com/products/5868095" },
-            { time: "12:00", activity: "카탈루냐 미술관 (MNAC)", desc: "로마네스크 벽화의 보물창고 (마이리얼트립)", link: "https://experiences.myrealtrip.com/products/5820422" },
-            { time: "16:00", activity: "미로 미술관", desc: "호안 미로의 강렬한 원초적 예술 (마이리얼트립)", link: "https://www.myrealtrip.com/offers/26724" },
-            { time: "20:00", activity: "매직 분수 쇼 (또는 대체 야경)", desc: "몬주익 분수쇼 (현지 가뭄으로 중단 시 고딕 지구 야경 투어로 대체)" },
-            { time: "21:30", activity: "택시 탑승 및 숙소 복귀", desc: "야경 관람 후 쾌적하게 택시로 복귀" }
-        ],
-        dining: [
-            { name: "Terraza Martínez", type: "Paella", desc: "몬주익 언덕 위, 환상적인 항구 전망과 빠에야로 유명." },
-            { name: "Xátiva Quinto Pino", type: "Paella", desc: "스페인 광장 인근 현지인 추천 빠에야 맛집." }
-        ],
-        costs: [
-            { item: "입장료 및 케이블카 (2인)", krw: "120,000원" },
-            { item: "식비 (2인)", krw: "135,000원" },
-            { item: "택시비", krw: "30,000원" }
-        ]
-    },
-    5: {
-        title: "Day 05: Shopping Therapy",
-        subtitle: "2027년 4월 22일 - 에이샴플레 & 그라시아",
+        title: "Day 02: Shopping Therapy",
+        subtitle: "2027년 4월 19일 - 에이샴플레 & 그라시아",
         coords: [
             { name: "H10 Casa Mimosa (출발)", lat: 41.3963, lon: 2.1614 },
             { name: "Passeig de Gràcia", lat: 41.3916, lon: 2.1649 },
@@ -140,31 +46,127 @@ const itineraryData = {
             { name: "Botafumeiro", type: "Seafood", desc: "그라시아 지구의 럭셔리한 해산물 전문점." }
         ],
         costs: [
-            { item: "식비 (식사+간식/2인)", krw: "180,000원" },
-            { item: "택시비", krw: "15,000원" }
+            { item: "식비 (식사+간식/2인)", krw: "180,000원" }
+        ]
+    },
+    3: {
+        title: "Day 03: Intensive Gaudi & Night Walk",
+        subtitle: "2027년 4월 20일 - 에두와 함께하는 바르셀로나의 낮과 밤",
+        coords: [
+            { name: "Meeting: El Fornet Cafe", lat: 41.3918, lon: 2.1652 },
+            { name: "Casa Batllo & Milà (외부)", lat: 41.3916, lon: 2.1649 },
+            { name: "Park Guell (내부)", lat: 41.4145, lon: 2.1527 },
+            { name: "Eixample (Edu 추천 로컬 점심)", lat: 41.3950, lon: 2.1620 },
+            { name: "Sagrada Familia (내부)", lat: 41.4036, lon: 2.1744 },
+            { name: "Primark (Night Tour Meeting)", lat: 41.3862, lon: 2.1705 },
+            { name: "H10 Case Mimosa (복귀)", lat: 41.3963, lon: 2.1614 }
+        ],
+        timeline: [
+            { time: "08:20", activity: "미팅: El Fornet Cafe", desc: "까사 바트요 인근 카페 미팅 (에두 주간 투어 시작)", link: "https://experiences.myrealtrip.com/products/3860315" },
+            { time: "09:00", activity: "가우디 집중 산책", desc: "현지인 가이드 에두와 함께하는 카사 바트요, 카사 밀라 외부 설명" },
+            { time: "13:00", activity: "에두 추천 로컬 점심", desc: "현지인 추천 맛집에서 즐기는 오찬 (1인 약 21유로)" },
+            { time: "15:30", activity: "사그라다 파밀리아 투어", desc: "성당 내부 집중 투어 및 상세 설명", link: "https://experiences.myrealtrip.com/products/3860315" },
+            { time: "18:00", activity: "주간 투어 종료 및 휴식", desc: "인근에서 가벼운 휴식 및 개인 정비" },
+            { time: "19:30", activity: "야간 산책 투어 미팅", desc: "카탈루냐 광장 Primark 앞 미팅 (밤이 더 아름다운 바르셀로나 산책)", link: "https://experiences.myrealtrip.com/products/3860316" },
+            { time: "21:30", activity: "투어 종료 및 일과 마무리", desc: "바르셀로나의 야경을 감상하며 숙소로 복귀" }
+        ],
+        dining: [
+            { name: "Edu's Choice Local Spot", type: "Traditional", desc: "현지 가이드 에두가 추천하는 숨은 로컬 맛집." },
+            { name: "El Fornet", type: "Bakery/Cafe", desc: "투어 시작 전 즐기는 바르셀로나의 커피." }
+        ],
+        costs: [
+            { item: "에두 주간 집중 투어비 (2인)", krw: "190,884원" },
+            { item: "에두 야간 산책 투어비 (2인)", krw: "61,950원" },
+            { item: "명소 입장권 (성당+구엘/현지 지불/2인)", krw: "152,064원" },
+            { item: "택시 및 로컬 중식/카페 (현지 지불/2인)", krw: "93,312원" },
+            { item: "석식 및 기타 (2인)", krw: "90,000원" }
+        ]
+    },
+    4: {
+        title: "Day 04: Montserrat & Sitges (NomadBenz)",
+        subtitle: "2027년 4월 21일 - 산과 바다를 동시에 즐기는 힐링 데이",
+        coords: [
+            { name: "Meeting: Mandarin Oriental Hotel", lat: 41.3915, lon: 2.1648 },
+            { name: "Montserrat", lat: 41.5933, lon: 1.8361 },
+            { name: "Montserrat Monastery", lat: 41.5890, lon: 1.8340 },
+            { name: "Sitges", lat: 41.2333, lon: 1.8105 },
+            { name: "Pg. de Gracia (도착)", lat: 41.3895, lon: 2.1661 },
+            { name: "H10 Casa Mimosa (복귀)", lat: 41.3963, lon: 2.1614 }
+        ],
+        timeline: [
+            { time: "07:40", activity: "미팅: 만다린 오리엔탈 호텔 앞", desc: "Pg. de Gràcia, 38-40 미팅 (노마드벤츠 전용 차량 탑승)", link: "https://experiences.myrealtrip.com/products/3517343" },
+            { time: "07:50", activity: "몬세라트로 출발", desc: "차량 이동 중 가이드의 역사 및 문화 설명 청취" },
+            { time: "09:10", activity: "몬세라트 수도원 도착", desc: "검은 성모상 및 수도원 성당 관람. 소년 성가대 합창 감상 (현지 상황에 따름)" },
+            { time: "12:30", activity: "자유 시간 및 중식", desc: "몬세라트의 기괴한 암석 절경을 감상하며 가벼운 식사" },
+            { time: "13:30", activity: "시체스(Sitges) 이동", desc: "지중해의 진주라 불리는 아름다운 해안 도시 시체스로 이동" },
+            { time: "14:40", activity: "시체스 관람 및 산책", desc: "해변 감상 및 드라마 촬영지 탐방, 자유로운 카페 타임" },
+            { time: "16:30", activity: "바르셀로나 시내로 출발", desc: "투어를 마무리하며 시내로 복귀" },
+            { time: "17:30", activity: "그라시아 거리 하차 및 종료", desc: "만다린 오리엔탈 호텔 인근 하차 후 일과 마무리" }
+        ],
+        dining: [
+            { name: "Sitges Local Tapas", type: "Casual", desc: "해변 근처에서 즐기는 신선한 타파스와 카바." },
+            { name: "Montserrat Cafeteria", type: "Quick", desc: "수도원 조망과 함께하는 간단한 런치." }
+        ],
+        costs: [
+            { item: "노마드벤츠 몬+시 투어비 (2인)", krw: "152,708원" },
+            { item: "수도원 풀패키지 입장권 (현지/2인)", krw: "120,960원" },
+            { item: "현지 중식 및 카페 (2인)", krw: "86,400원" },
+            { item: "석식 및 기타 (2인)", krw: "90,000원" }
+        ]
+    },
+    5: {
+        title: "Day 05: Art in the City Heart",
+        subtitle: "2027년 4월 22일 - 도심 속 미술관 탐방",
+        coords: [
+            { name: "Picasso Museum (패스수령)", lat: 41.3852, lon: 2.1809 },
+            { name: "Tapies Foundation", lat: 41.3917, lon: 2.1648 },
+            { name: "MACBA & CCCB", lat: 41.3831, lon: 2.1668 },
+            { name: "Gothic Quarter (중식)", lat: 41.3833, lon: 2.1764 },
+            { name: "Borne District (휴식/산책)", lat: 41.3850, lon: 2.1815 },
+            { name: "H10 Casa Mimosa (복귀)", lat: 41.3963, lon: 2.1614 }
+        ],
+        timeline: [
+            { time: "09:00", activity: "피카소 미술관 (시작)", desc: "오피스에서 아트켓 패스포트 수령 후 여유롭게 첫 관람 시작", link: "https://experiences.myrealtrip.com/products/5820926" },
+            { time: "11:30", activity: "안토니 타피에스 미술관", desc: "도심 속 모던한 건축물과 타피에스의 철학적인 작품 감상" },
+            { time: "13:00", activity: "라발 지구 자유 중식", desc: "MACBA 인근 힙한 타파스 바 또는 채식 식당 체험" },
+            { time: "14:30", activity: "MACBA & CCCB", desc: "현대 미술관(MACBA)과 문화 센터(CCCB)에서 바르셀로나의 현대적 감성 충전" },
+            { time: "17:00", activity: "보르 지구 여유 시간", desc: "미술관 탐방 후 고딕/보르 지구의 예쁜 카페와 샵 구경" },
+            { time: "19:00", activity: "디너 및 일과 마무리", desc: "현지 분위기 가득한 레스토랑에서 저녁 식사 후 휴식" }
+        ],
+        dining: [
+            { name: "Bun Bo Raval", type: "Vietnamese", desc: "미술관 탐방 중 가볍고 신선하게 즐기는 이색 맛집." },
+            { name: "El Xampanyet", type: "Tapas", desc: "피카소 미술관 인근, 항상 붐비는 바르셀로나 전통 타파스 바." }
+        ],
+        costs: [
+            { item: "아트켓 6대 미술관 패스 (2인)", krw: "128,356원" },
+            { item: "현지 식비 및 기타 (2인)", krw: "207,360원" }
         ]
     },
     6: {
-        title: "Day 06: Sant Jordi's Day",
-        subtitle: "2027년 4월 23일 - 산 조르디 축제",
+        title: "Day 06: Sant Jordi & Montjuic Art",
+        subtitle: "2027년 4월 23일 - 장미와 책, 그리고 예술의 언덕",
         coords: [
-            { name: "H10 Casa Mimosa", lat: 41.3963, lon: 2.1614 },
-            { name: "Placa de Catalunya", lat: 41.3851, lon: 2.1734 },
-            { name: "Gothic Quarter (점심)", lat: 41.3825, lon: 2.1769 },
-            { name: "Majestic Hotel", lat: 41.3920, lon: 2.1645 }
+            { name: "MNAC (국립미술관)", lat: 41.3686, lon: 2.1534 },
+            { name: "Miro Foundation (미로재단)", lat: 41.3639, lon: 2.1598 },
+            { name: "Majestic Hotel (체크인)", lat: 41.3920, lon: 2.1645 },
+            { name: "Pg. de Gracia (축제거리)", lat: 41.3895, lon: 2.1661 },
+            { name: "Las Ramblas (장미시장)", lat: 41.3813, lon: 2.1732 }
         ],
         timeline: [
-            { time: "10:00", activity: "체크아웃 및 도보 이동", desc: "H10 Casa Mimosa 체크아웃 및 Majestic Hotel로 이동 (축제 차량 통제 대비 도보 5분 산책)" },
-            { time: "11:00", activity: "산 조르디 축제 만끽", desc: "카탈루냐 광장 및 람블라스 거리의 장미와 책 물결" },
-            { time: "14:00", activity: "가벼운 거리 점심", desc: "축제 인파를 피해 한적한 골목 맛집 탐방" },
-            { time: "20:00", activity: "Majestic Hotel 체크인 및 디너", desc: "축제 당일의 여유로운 파인 다이닝", link: "https://www.agoda.com/ko-kr/search?city=10282" }
+            { time: "09:30", activity: "몬주익 언덕 이동 및 MNAC 관람", desc: "아트켓 패스로 카탈루냐 국립 미술관 입장. 장엄한 로마네스크 벽화 감상" },
+            { time: "11:30", activity: "호안 미로 재단 관람", desc: "미로 특유의 강렬한 색채와 상징이 가득한 예술 세계 탐험 (아트켓 포함)" },
+            { time: "13:30", activity: "호텔 이동 및 중식", desc: "H10 체크아웃 후 Majestic Hotel로 이동 및 인근에서 활기찬 축제 오찬" },
+            { time: "15:30", activity: "Sant Jordi 축제 만끽", desc: "람블라스와 그라시아 거리를 메운 장미와 책 노점 구경 (사랑하는 사람에게 장미 선물)" },
+            { time: "18:00", activity: "축제 기념품 쇼핑", desc: "특별한 Sant Jordi 에디션 도서나 소품 쇼핑 및 건물 외관 장식 구경" },
+            { time: "20:00", activity: "페스티벌 스페셜 디너", desc: "마제스틱 호텔 인근의 고품격 레스토랑에서 즐기는 특별한 저녁 식사" },
+            { time: "22:00", activity: "호텔 복귀 및 마지막 밤", desc: "Majestic Hotel에서 바르셀로나 여정의 마지막 밤 마무리" }
         ],
         dining: [
-            { name: "SOLC (솔크)", type: "Farm-to-table", desc: "마제스틱 호텔 내부의 고품격 다이닝. 로컬 식재료 최상급." },
-            { name: "7 Portes (7포르테스)", type: "Traditional", desc: "피카소가 방문했던 1836년 전통의 빠에야 명소 (예약 필수)." }
+            { name: "SOLC", type: "Farm-to-table", desc: "마제스틱 호텔 내부의 고품격 다이닝." },
+            { name: "Cervecería Catalana", type: "Tapas", desc: "축제일의 활기찬 분위기 속에서 즐기는 최고의 타파스." }
         ],
         costs: [
-            { item: "장미/책 구입비 (2인)", krw: "30,000원" },
+            { item: "장미 및 도서 구입비 (2인)", krw: "30,000원" },
             { item: "페스티벌 스페셜 디너 (2인)", krw: "240,000원" }
         ]
     },
@@ -385,37 +387,37 @@ document.querySelectorAll('.itinerary-day').forEach(day => {
 function toggleWeather() {
     const isRaining = document.getElementById('weatherToggle').checked;
     
-    // Day 2 Target
-    const day2Title = document.getElementById('day2-title');
-    const day2Desc = document.getElementById('day2-desc');
-    const day2Card = document.getElementById('day2-card');
+    // Gaudi Day Target (Now Day 3)
+    const gaudiTitle = document.getElementById('gaudi-title');
+    const gaudiDesc = document.getElementById('gaudi-desc');
+    const gaudiCard = document.getElementById('gaudi-card');
     
-    if (day2Title) {
+    if (gaudiTitle) {
         if (isRaining) {
-            day2Title.innerText = "Modernist Indoors";
-            day2Desc.innerHTML = "<b>우천 대비 Plan B:</b> 가우디 건축물(사그라다 파밀리아, 카사 바트요) 내부 관람에 집중하고 주변 실내 투어로 대체합니다.";
-            day2Card.querySelector('.day-content').style.borderLeft = "4px solid #3498db";
+            gaudiTitle.innerText = "Modernist Indoors";
+            gaudiDesc.innerHTML = "<b>우천 대비 Plan B:</b> 가우디 건축물(사그라다 파밀리아, 카사 바트요) 내부 관람에 집중하고 주변 실내 투어로 대체합니다.";
+            gaudiCard.querySelector('.day-content').style.borderLeft = "4px solid #3498db";
         } else {
-            day2Title.innerText = "Gaudi's Dream";
-            day2Desc.innerHTML = "사그라다 파밀리아와 구엘 공원 집중 투어. 가우디의 상상력이 현실이 된 공간을 탐험합니다.";
-            day2Card.querySelector('.day-content').style.borderLeft = "4px solid var(--accent)";
+            gaudiTitle.innerText = "Gaudi's Dream";
+            gaudiDesc.innerHTML = "사그라다 파밀리아와 구엘 공원 집중 투어. 가우디의 상상력이 현실이 된 공간을 탐험합니다.";
+            gaudiCard.querySelector('.day-content').style.borderLeft = "4px solid var(--accent)";
         }
     }
     
-    // Day 3 Target
-    const day3Title = document.getElementById('day3-title');
-    const day3Desc = document.getElementById('day3-desc');
-    const day3Card = document.getElementById('day3-card');
+    // Montserrat Day Target (Now Day 4)
+    const montserratTitle = document.getElementById('montserrat-title');
+    const montserratDesc = document.getElementById('montserrat-desc');
+    const montserratCard = document.getElementById('montserrat-card');
     
-    if (day3Title) {
+    if (montserratTitle) {
         if (isRaining) {
-            day3Title.innerText = "Shopping & Museums";
-            day3Desc.innerHTML = "<b>우천 대비 Plan B:</b> 야외인 몬세라트 대신 실내 복합 문화공간 산 파우 병원과 근거리 쇼핑으로 전환합니다.";
-            day3Card.querySelector('.day-content').style.borderLeft = "4px solid #3498db";
+            montserratTitle.innerText = "Shopping & Museums";
+            montserratDesc.innerHTML = "<b>우천 대비 Plan B:</b> 야외인 몬세라트 대신 실내 복합 문화공간 산 파우 병원과 근거리 쇼핑으로 전환합니다.";
+            montserratCard.querySelector('.day-content').style.borderLeft = "4px solid #3498db";
         } else {
-            day3Title.innerText = "The Sacred Mountain";
-            day3Desc.innerHTML = "<b>몬세라트(Montserrat)</b> 당일치기. 기괴한 암석 산과 성모 마리아상이 있는 수도원에서 영적인 평온함을 찾습니다.";
-            day3Card.querySelector('.day-content').style.borderLeft = "4px solid var(--accent)";
+            montserratTitle.innerText = "The Sacred Mountain";
+            montserratDesc.innerHTML = "<b>몬세라트(Montserrat)</b> 당일치기. 기괴한 암석 산과 성모 마리아상이 있는 수도원에서 영적인 평온함을 찾습니다.";
+            montserratCard.querySelector('.day-content').style.borderLeft = "4px solid var(--accent)";
         }
     }
 }
