@@ -1,4 +1,3 @@
-// Detailed Itinerary Data (Costs are for 2 PEOPLE)
 const itineraryData = {
     1: {
         title: "Day 01: Hola Barcelona",
@@ -9,199 +8,174 @@ const itineraryData = {
             { name: "Hotel Catalonia Passeig de Gracia", lat: 41.3901, lon: 2.1706 }
         ],
         timeline: [
-            { time: "19:10", activity: "BCN 공항 도착 (Asiana/T'way)", desc: "직항 항공편(OZ511/TW407) 도착 기준", link: "https://m.flyasiana.com/C/KR/KO/index" },
-            { time: "20:30", activity: "공항 -> 시내 이동", desc: "도착 후 우버(Uber) 또는 프리나우(FREENOW) 앱을 이용하여 숙소로 이동 (약 42유로)" },
-            { time: "21:30", activity: "호텔 체크인 및 늦은 저녁", desc: "Hotel Catalonia Passeig de Gracia 체크인 및 호텔 인근 테라스 바에서 카바(Cava) 한 잔" }
+            { time: "19:10", activity: "BCN 공항 도착 (Asiana)", desc: "직항 항공편(OZ511) 도착 기준", link: "https://m.flyasiana.com/C/KR/KO/index" },
+            { time: "20:30", activity: "공항 -> 시내 이동", desc: "우버/택시를 이용하여 숙소로 이동 (약 42유로)" },
+            { time: "21:30", activity: "호텔 체크인 및 휴식", desc: "Hotel Catalonia 체크인 및 인근 테라스 바 휴식" }
         ],
         dining: [
-            { name: "Vinitus (비니투스)", type: "Tapas", desc: "권혁수 맛집으로 유명한 타파스 성지. 맛조개와 꿀대구 필수." },
-            { name: "Solraig", type: "Modern", desc: "깔끔하고 세련된 지중해식 요리." }
+            { name: "Vinitus (비니투스)", type: "Tapas", desc: "맛조개와 꿀대구 필수 맛집." }
         ],
         costs: [
             { item: "공항 -> 시내 이동 (Uber)", krw: "72,576원" },
-            { item: "호텔 인근 석식 (2인)", krw: "75,000원" }
+            { item: "호텔 인근 석식 (2인)", krw: "75,000원" },
+            { item: "현지 관광세 (City Tax/1박)", krw: "28,500원" }
         ]
     },
     2: {
         title: "Day 02: Shopping Therapy",
         subtitle: "2027년 4월 19일 - 에이샴플레 & 그라시아",
         coords: [
-            { name: "Hotel Catalonia Passeig de Gracia (출발)", lat: 41.3901, lon: 2.1706 },
+            { name: "Hotel Catalonia (출발)", lat: 41.3901, lon: 2.1706 },
             { name: "Passeig de Gràcia", lat: 41.3916, lon: 2.1649 },
             { name: "Boqueria Market", lat: 41.3817, lon: 2.1714 },
             { name: "Gracia District", lat: 41.4031, lon: 2.1572 },
-            { name: "Ciudad Condal (칵테일)", lat: 41.3887, lon: 2.1666 },
-            { name: "Hotel Catalonia Passeig de Gracia (도착)", lat: 41.3901, lon: 2.1706 }
+            { name: "Ciudad Condal (저녁)", lat: 41.3887, lon: 2.1666 },
+            { name: "Hotel Catalonia (복귀)", lat: 41.3901, lon: 2.1706 }
         ],
         timeline: [
             { time: "09:50", activity: "숙소 출발", desc: "도보로 명품 거리 이동" },
-            { time: "10:00", activity: "파세이그 드 그라시아", desc: "명품 쇼핑 및 윈도우 쇼핑" },
-            { time: "13:00", activity: "보케리아 시장 인근 중식", desc: "다양한 신선 식재료와 활기찬 시장 분위기" },
-            { time: "15:00", activity: "그라시아 지구", desc: "힙한 브런치 카페와 소품샵 탐방" },
-            { time: "20:00", activity: "여유로운 칵테일 바", desc: "현지인들처럼 타파스와 cocktail 즐기기" },
-            { time: "22:30", activity: "숙소 복귀", desc: "Hotel Catalonia Passeig de Gracia 도착 및 휴식" }
+            { time: "10:00", activity: "파세이그 드 그라시아", desc: "명품 쇼핑 및 건축물 구경" },
+            { time: "13:00", activity: "보케리아 시장 중식", desc: "신선한 식재료와 활기찬 시장 분위기" },
+            { time: "15:00", activity: "그라시아 지구", desc: "힙한 카페와 소품샵 탐방" },
+            { time: "20:00", activity: "저녁 및 칵테일", desc: "현지인 맛집 시우다드 콘달에서의 타파스" },
+            { time: "22:30", activity: "숙소 복귀", desc: "호텔 도착 및 휴식" }
         ],
         dining: [
-            { name: "Ciudad Condal (시우다드 콘달)", type: "Tapas", desc: "언제나 북적이는 바르셀로나 최고의 타파스 명소." },
-            { name: "Botafumeiro", type: "Seafood", desc: "그라시아 지구의 럭셔리한 해산물 전문점." }
+            { name: "Ciudad Condal (시우다드 콘달)", type: "Tapas", desc: "언제나 북적이는 바르셀로나 최고의 타파스 명소." }
         ],
         costs: [
-            { item: "식비 (식사+간식/2인)", krw: "180,000원" }
+            { item: "식비 및 간식 (2인)", krw: "180,000원" },
+            { item: "현지 관광세 (City Tax/1박)", krw: "28,500원" }
         ]
     },
     3: {
         title: "Day 03: Intensive Gaudi & Night Walk",
-        subtitle: "2027년 4월 20일 - 에두와 함께하는 바르셀로나의 낮과 밤",
+        subtitle: "2027년 4월 20일 - 가우디 집중 투어 & 야경",
         coords: [
-            { name: "Hotel Catalonia Passeig de Gracia (출발)", lat: 41.3901, lon: 2.1706 },
+            { name: "Hotel Catalonia (출발)", lat: 41.3901, lon: 2.1706 },
             { name: "Meeting: El Fornet Cafe", lat: 41.3918, lon: 2.1652 },
-            { name: "Casa Batllo & Milà (외부)", lat: 41.3916, lon: 2.1649 },
-            { name: "Park Guell (내부)", lat: 41.4145, lon: 2.1527 },
-            { name: "Eixample (Edu 추천 로컬 점심)", lat: 41.3950, lon: 2.1620 },
-            { name: "Sagrada Familia (내부)", lat: 41.4036, lon: 2.1744 },
-            { name: "Primark (Night Tour Meeting)", lat: 41.3862, lon: 2.1705 },
-            { name: "Hotel Catalonia Passeig de Gracia (복귀)", lat: 41.3901, lon: 2.1706 }
+            { name: "Casa Batllo & Milà", lat: 41.3916, lon: 2.1649 },
+            { name: "Park Guell (구엘 공원)", lat: 41.4145, lon: 2.1527 },
+            { name: "Local Lunch", lat: 41.3950, lon: 2.1620 },
+            { name: "Sagrada Familia", lat: 41.4036, lon: 2.1744 },
+            { name: "Primark (야간 투어 미팅)", lat: 41.3862, lon: 2.1705 },
+            { name: "Hotel Catalonia (복귀)", lat: 41.3901, lon: 2.1706 }
         ],
         timeline: [
-            { time: "08:10", activity: "숙소 출발", desc: "Catalonia 호텔에서 도보로 미팅 장소 이동" },
-            { time: "08:20", activity: "미팅: El Fornet Cafe", desc: "까사 바트요 인근 카페 미팅 (에두 주간 투어 시작)", link: "https://experiences.myrealtrip.com/products/3860315" },
-            { time: "09:00", activity: "가우디 집중 산책", desc: "현지인 가이드 에두와 함께하는 카사 바트요, 카사 밀라 외부 설명" },
-            { time: "13:00", activity: "에두 추천 로컬 점심", desc: "현지인 추천 맛집에서 즐기는 오찬 (1인 약 21유로)" },
-            { time: "15:30", activity: "사그라다 파밀리아 투어", desc: "성당 내부 집중 투어 및 상세 설명", link: "https://experiences.myrealtrip.com/products/3860315" },
-            { time: "18:00", activity: "주간 투어 종료 및 휴식", desc: "인근에서 가벼운 휴식 및 개인 정비" },
-            { time: "19:30", activity: "야간 산책 투어 미팅", desc: "카탈루냐 광장 Primark 앞 미팅 (밤이 더 아름다운 바르셀로나 산책)", link: "https://experiences.myrealtrip.com/products/3860316" },
-            { time: "21:30", activity: "투어 종료 및 숙소 복귀", desc: "바르셀로나의 야경을 감상하며 Catalonia 호텔로 복귀" }
-        ],
-        dining: [
-            { name: "Edu's Choice Local Spot", type: "Traditional", desc: "현지 가이드 에두가 추천하는 숨은 로컬 맛집." },
-            { name: "El Fornet", type: "Bakery/Cafe", desc: "투어 시작 전 즐기는 바르셀로나의 커피." }
+            { time: "08:10", activity: "숙소 출발", desc: "도보로 미팅 장소 이동" },
+            { time: "08:20", activity: "미팅: El Fornet Cafe", desc: "가우디 주간 투어 시작", link: "https://experiences.myrealtrip.com/products/3860315" },
+            { time: "09:30", activity: "가우디 건축 산책", desc: "카사 바트요, 카사 밀라 설명" },
+            { time: "11:30", activity: "구엘 공원 입장", desc: "인기 스팟 구엘 공원 집중 관람" },
+            { time: "13:30", activity: "로컬 점심 식사", desc: "가이드 추천 현지 로컬 맛집" },
+            { time: "15:30", activity: "성당 내부 집중 투어", desc: "사그라다 파밀리아 내부 관람" },
+            { time: "19:30", activity: "야간 산책 투어", desc: "카탈루냐 광장 Primark 앞 미팅", link: "https://experiences.myrealtrip.com/products/3860316" },
+            { time: "21:30", activity: "숙소 복귀", desc: "투어 종료 및 호텔 복귀" }
         ],
         costs: [
-            { item: "에두 주간 집중 투어비 (2인)", krw: "190,884원" },
-            { item: "에두 야간 산책 투어비 (2인)", krw: "61,950원" },
-            { item: "명소 입장권 (성당+구엘/현지 지불/2인)", krw: "152,064원" },
-            { item: "택시 및 로컬 중식/카페 (현지 지불/2인)", krw: "93,312원" },
-            { item: "석식 및 기타 (2인)", krw: "90,000원" }
+            { item: "에두 주간/야간 투어비 (2인)", krw: "252,834원" },
+            { item: "명소 입장권 (성당+구엘/2인)", krw: "152,064원" },
+            { item: "식비 및 기타 (2인)", krw: "183,312원" },
+            { item: "현지 관광세 (City Tax/1박)", krw: "28,500원" }
         ]
     },
     4: {
-        title: "Day 04: Montserrat & Sitges (NomadBenz)",
-        subtitle: "2027년 4월 21일 - 산과 바다를 동시에 즐기는 힐링 데이",
+        title: "Day 04: Montserrat & Sitges",
+        subtitle: "2027년 4월 21일 - 산과 바다가 함께하는 하루",
         coords: [
-            { name: "Hotel Catalonia Passeig de Gracia (출발)", lat: 41.3901, lon: 2.1706 },
-            { name: "Meeting: Mandarin Oriental Hotel", lat: 41.3915, lon: 2.1648 },
-            { name: "Montserrat", lat: 41.5933, lon: 1.8361 },
-            { name: "Montserrat Monastery", lat: 41.5890, lon: 1.8340 },
+            { name: "Hotel Catalonia (출발)", lat: 41.3901, lon: 2.1706 },
+            { name: "Meeting: Mandarin Oriental", lat: 41.3915, lon: 2.1648 },
+            { name: "Montserrat 수도원", lat: 41.5933, lon: 1.8361 },
             { name: "Sitges", lat: 41.2333, lon: 1.8105 },
-            { name: "Pg. de Gracia (도착)", lat: 41.3895, lon: 2.1661 },
-            { name: "Hotel Catalonia Passeig de Gracia (복귀)", lat: 41.3901, lon: 2.1706 }
+            { name: "Pg. de Gracia (복귀 하차)", lat: 41.3895, lon: 2.1661 },
+            { name: "Hotel Catalonia (복귀)", lat: 41.3901, lon: 2.1706 }
         ],
         timeline: [
-            { time: "07:30", activity: "숙소 출발", desc: "Catalonia 호텔에서 도보로 투어 미팅 장소 이동" },
-            { time: "07:40", activity: "미팅: 만다린 오리엔탈 호텔 앞", desc: "Pg. de Gràcia, 38-40 미팅 (노마드벤츠 전용 차량 탑승)", link: "https://experiences.myrealtrip.com/products/3517343" },
-            { time: "07:50", activity: "몬세라트로 출발", desc: "차량 이동 중 가이드의 역사 및 문화 설명 청취" },
-            { time: "09:10", activity: "몬세라트 수도원 도착", desc: "검은 성모상 및 수도원 성당 관람. 소년 성가대 합창 감상 (현지 상황에 따름)" },
-            { time: "12:30", activity: "자유 시간 및 중식", desc: "몬세라트의 기괴한 암석 절경을 감상하며 가벼운 식사" },
-            { time: "13:30", activity: "시체스(Sitges) 이동", desc: "지중해의 진주라 불리는 아름다운 해안 도시 시체스로 이동" },
-            { time: "14:40", activity: "시체스 관람 및 산책", desc: "해변 감상 및 드라마 촬영지 탐방, 자유로운 카페 타임" },
-            { time: "16:30", activity: "바르셀로나 시내로 출발", desc: "투어를 마무리하며 시내로 복귀" },
-            { time: "17:30", activity: "시내 하차 및 숙소 복귀", desc: "그라시아 거리 하차 후 Catalonia 호텔로 복귀하여 휴식" }
-        ],
-        dining: [
-            { name: "Sitges Local Tapas", type: "Casual", desc: "해변 근처에서 즐기는 신선한 타파스와 카바." },
-            { name: "Montserrat Cafeteria", type: "Quick", desc: "수도원 조망과 함께하는 간단한 런치." }
+            { time: "07:30", activity: "숙소 출발", desc: "도보로 투어 미팅 장소 이동" },
+            { time: "07:40", activity: "미팅: Pg. Gracia 38-40", desc: "노마드벤츠 전용 차량 탑승", link: "https://experiences.myrealtrip.com/products/3517343" },
+            { time: "09:30", activity: "몬세라트 수도원", desc: "검은 성모상 및 산악 조망 관람" },
+            { time: "14:30", activity: "시체스(Sitges) 탐방", desc: "해변 감상 및 도시 산책" },
+            { time: "17:30", activity: "시내 복귀 및 하차", desc: "그라시아 거리 도착" },
+            { time: "18:30", activity: "숙소 도착 및 휴식", desc: "호텔 복귀" }
         ],
         costs: [
-            { item: "노마드벤츠 몬+시 투어비 (2인)", krw: "152,708원" },
-            { item: "수도원 풀패키지 입장권 (현지/2인)", krw: "120,960원" },
-            { item: "현지 중식 및 카페 (2인)", krw: "86,400원" },
-            { item: "석식 및 기타 (2인)", krw: "90,000원" }
+            { item: "몬세라트+시체스 투어비 (2인)", krw: "152,708원" },
+            { item: "수도원 입장 및 중식 (2인)", krw: "207,360원" },
+            { item: "석식 및 기타 (2인)", krw: "90,000원" },
+            { item: "현지 관광세 (City Tax/1박)", krw: "28,500원" }
         ]
     },
     5: {
         title: "Day 05: Art in the City Heart",
         subtitle: "2027년 4월 22일 - 도심 속 미술관 탐방",
         coords: [
-            { name: "Hotel Catalonia Passeig de Gracia (출발)", lat: 41.3901, lon: 2.1706 },
-            { name: "Picasso Museum (패스수령)", lat: 41.3852, lon: 2.1809 },
+            { name: "Hotel Catalonia (출발)", lat: 41.3901, lon: 2.1706 },
+            { name: "Picasso Museum", lat: 41.3852, lon: 2.1809 },
             { name: "Gothic Quarter (중식)", lat: 41.3833, lon: 2.1764 },
-            { name: "MACBA & CCCB", lat: 41.3831, lon: 2.1668 },
+            { name: "MACBA / CCCB", lat: 41.3831, lon: 2.1668 },
             { name: "Tapies Foundation", lat: 41.3917, lon: 2.1648 },
             { name: "Placa Catalunya (석식)", lat: 41.3871, lon: 2.1700 },
-            { name: "Hotel Catalonia Passeig de Gracia (복귀)", lat: 41.3901, lon: 2.1706 }
+            { name: "Hotel Catalonia (복귀)", lat: 41.3901, lon: 2.1706 }
         ],
         timeline: [
-            { time: "10:30", activity: "숙소 출발", desc: "Catalonia 호텔에서 출발하여 보르 지구로 이동" },
-            { time: "11:00", activity: "피카소 미술관 (시작)", desc: "오피스에서 아트켓 패스포트 수령 후 첫 관람 시작", link: "https://experiences.myrealtrip.com/products/5820926" },
-            { time: "13:00", activity: "고딕 지구 산책 및 중식", desc: "고딕 지구의 미로 같은 골목을 탐방하며 여유로운 오찬" },
-            { time: "15:00", activity: "MACBA & CCCB", desc: "라발 지구의 현대 미술관과 문화 센터에서 예술적 영감 충전" },
-            { time: "17:30", activity: "안토니 타피에스 미술관", desc: "에이샴플레로 이동하여 타피에스의 철학적인 작품 세계 관람" },
-            { time: "19:30", activity: "카탈루냐 광장 복귀 및 석식", desc: "도시의 중심 광장으로 돌아와 활기찬 분위기 속에서 저녁 식사" },
-            { time: "21:30", activity: "숙소 복귀 및 휴식", desc: "Catalonia 호텔로 복귀하여 하루를 마무리" }
-        ],
-        dining: [
-            { name: "Can Culleretes", type: "Traditional", desc: "고딕 지구의 유서 깊은 식당. 바르셀로나에서 가장 오래된 전통 요리의 맛." },
-            { name: "El Nacional", type: "Gastronomy Hall", desc: "카탈루냐 광장 인근, 아름다운 모더니즘 공간에서 즐기는 다양한 스페인 미식." }
+            { time: "10:30", activity: "숙소 출발", desc: "미술관 투어 시작" },
+            { time: "11:00", activity: "피카소 미술관", desc: "아트켓 패스포트 수령 및 관람", link: "https://experiences.myrealtrip.com/products/5820926" },
+            { time: "13:00", activity: "고딕 지구 오찬", desc: "역사적인 골목 탐방 시 식사" },
+            { time: "15:00", activity: "MACBA & CCCB", desc: "현대 미술과 문화 센터 관람" },
+            { time: "17:30", activity: "타피에스 미술관", desc: "안토니 타피에스의 예술 세계 관람" },
+            { time: "19:30", activity: "카탈루냐 광장 석식", desc: "도시 중심가 산책 및 저녁" },
+            { time: "21:30", activity: "숙소 복귀", desc: "호텔 휴식" }
         ],
         costs: [
             { item: "아트켓 6대 미술관 패스 (2인)", krw: "128,356원" },
-            { item: "현지 식비 및 기타 (2인)", krw: "207,360원" }
+            { item: "전일 식비 및 기타 (2인)", krw: "207,360원" },
+            { item: "현지 관광세 (City Tax/1박)", krw: "28,500원" }
         ]
     },
     6: {
         title: "Day 06: Sant Jordi & Montjuic Art",
-        subtitle: "2027년 4월 23일 - 장미와 책, 그리고 예술의 언덕",
+        subtitle: "2027년 4월 23일 - 장미의 축제 & 몬주익",
         coords: [
-            { name: "Hotel Catalonia Passeig de Gracia (출발)", lat: 41.3901, lon: 2.1706 },
+            { name: "Hotel Catalonia (출발)", lat: 41.3901, lon: 2.1706 },
             { name: "MNAC (국립미술관)", lat: 41.3686, lon: 2.1534 },
             { name: "Pg. de Gracia (축제거리)", lat: 41.3895, lon: 2.1661 },
             { name: "Las Ramblas (장미시장)", lat: 41.3813, lon: 2.1732 },
-            { name: "Hotel Catalonia Passeig de Gracia (복귀)", lat: 41.3901, lon: 2.1706 }
+            { name: "SOLC (스페셜 디너)", lat: 41.3901, lon: 2.1706 },
+            { name: "Hotel Catalonia (복귀)", lat: 41.3901, lon: 2.1706 }
         ],
         timeline: [
-            { time: "09:00", activity: "숙소 출발", desc: "Hotel Catalonia Passeig de Gracia에서 몬주익 언덕으로 이동" },
-            { time: "09:30", activity: "몬주익 언덕 이동 및 MNAC 관람", desc: "아트켓 패스로 카탈루냐 국립 미술관 입장. 장엄한 로마네스크 벽화 감상" },
-            { time: "12:30", activity: "시내 복귀 및 축제 오찬", desc: "몬주익 관람 후 시내로 복귀하여 산 조르디 축제 분위기 속에서 점심 식사" },
-            { time: "14:30", activity: "Sant Jordi 축제 만끽", desc: "람블라스와 그라시아 거리를 메운 장미와 책 노점 구경 (사랑하는 사람에게 장미 선물)" },
-            { time: "17:30", activity: "축제 기념품 쇼핑", desc: "특별한 Sant Jordi 에디션 도서나 소품 쇼핑 및 건물 외관 장장식 구경" },
-            { time: "20:00", activity: "페스티벌 스페셜 디너", desc: "숙소 인근의 고품격 레스토랑에서 즐기는 특별한 저녁 식사" },
-            { time: "22:00", activity: "숙소 복귀 및 마지막 밤", desc: "Hotel Catalonia Passeig de Gracia에서 바르셀로나 여정의 마지막 밤 마무리" }
-        ],
-        dining: [
-            { name: "SOLC", type: "Farm-to-table", desc: "신선한 로컬 소싱 식재료를 사용한 고품격 다이닝." },
-            { name: "Cervecería Catalana", type: "Tapas", desc: "축제일의 활기찬 분위기 속에서 즐기는 최고의 타파스." }
+            { time: "09:00", activity: "숙소 출발", desc: "몬주익 언덕으로 이동" },
+            { time: "09:30", activity: "몬주익 MNAC 관람", desc: "아트켓 패스 활용 국립미술관 입장" },
+            { time: "14:30", activity: "Sant Jordi 축제 만끽", desc: "그라시아 거리 축제 구경" },
+            { time: "16:30", activity: "장미 노점 및 쇼핑", desc: "축제 분위기의 람블라스 산책" },
+            { time: "20:00", activity: "축제 스페셜 디너", desc: "SOLC 레스토랑에서의 만찬" },
+            { time: "22:00", activity: "숙소 복귀", desc: "마지막 밤 휴식" }
         ],
         costs: [
-            { item: "페스티벌 스페셜 디너 (2인)", krw: "240,000원" }
+            { item: "산 조르디 디너 및 축제 경비 (2인)", krw: "240,000원" },
+            { item: "현지 관광세 (City Tax/1박)", krw: "28,500원" }
         ]
     },
     7: {
         title: "Day 07: Adios Bcn",
-        subtitle: "2027년 4월 24일 - 마지막 지중해",
+        subtitle: "2027년 4월 24일 - 마지막 안녕",
         coords: [
-            { name: "Hotel Catalonia Passeig de Gracia (출발)", lat: 41.3901, lon: 2.1706 },
+            { name: "Hotel (체크아웃)", lat: 41.3901, lon: 2.1706 },
             { name: "Barceloneta Beach", lat: 41.3784, lon: 2.1925 },
-            { name: "7 Portes", lat: 41.3820, lon: 2.1834 },
+            { name: "7 Portes (빠에야)", lat: 41.3820, lon: 2.1834 },
             { name: "Ciutadella Park", lat: 41.3887, lon: 2.1887 },
-            { name: "Hotel (Luggage pick-up)", lat: 41.3901, lon: 2.1706 },
+            { name: "Hotel (짐 찾기)", lat: 41.3901, lon: 2.1706 },
             { name: "BCN Airport", lat: 41.2974, lon: 2.0833 }
         ],
         timeline: [
-            { time: "09:30", activity: "숙소 체크아웃", desc: "Hotel Catalonia Passeig de Gracia 체크아웃 및 짐 보관" },
-            { time: "10:30", activity: "바르셀로네타 해변", desc: "지중해의 시원한 산책과 함께하는 바르셀로나의 마지막 오전" },
-            { time: "12:30", activity: "피날레 빠에야", desc: "7포르테스(7 Portes)에서 즐기는 정통 빠에야 오찬" },
-            { time: "14:30", activity: "시우타데야 공원 산책", desc: "공원 산책 및 개선문 근처 여유로운 카페 타임" },
-            { time: "16:30", activity: "숙소 이동 및 짐 찾기", desc: "호텔로 돌아와 보관된 짐 수령 및 공항 이동 준비" },
-            { time: "17:00", activity: "공항으로 출발", desc: "BCN 공항 T1으로 출발 (공항까지 약 30-40분 소요)" },
-            { time: "20:50", activity: "바르셀로나 출발", desc: "아시아나 직항(OZ512) 또는 경유편 탑승 (3시간 전 공항 도착 권장)" }
-        ],
-        dining: [
-            { name: "7 Portes", type: "Classical", desc: "바르셀로나의 마지막을 장식할 정통 빠에야 식당." },
-            { name: "Can Majó", type: "Seafood", desc: "바르셀로네타 해변 바로 앞, 신선한 해산물이 가득한 곳." }
+            { time: "09:30", activity: "숙소 체크아웃", desc: "짐 보관 후 오전 산책" },
+            { time: "10:30", activity: "바르셀로네타 산책", desc: "지중해 바다와 작별" },
+            { time: "12:30", activity: "마지막 빠에야 오찬", desc: "7 Portes에서의 성찬" },
+            { time: "14:30", activity: "시우타데야 공원", desc: "여유로운 마지막 산책" },
+            { time: "16:30", activity: "호텔 짐 찾기", desc: "출국 준비 및 공항 이동" },
+            { time: "17:00", activity: "공항으로 출발", desc: "BCN 공항 T1 이동" }
         ],
         costs: [
-            { item: "마지막 만찬 (2인)", krw: "150,000원" },
-            { item: "공항 이동 (Uber/Taxi)", krw: "72,000원" }
+            { item: "식비 및 공항 이동 (2인)", krw: "222,000원" }
         ]
     }
 };
@@ -223,9 +197,16 @@ function openDayModal(day) {
     
     
 
-    const cssHEX = ['#cb2b3e', '#2a81cb', '#2aad27', '#cb8427', '#9c2bc1', '#ffd326'];
-    let timelineHTML = data.timeline.map((item, idx) => `
-        <div class="timeline-item" style="--dot-color: ${cssHEX[idx % cssHEX.length]}">
+    // Unified Color Palette
+    const mainHEX = ['#cb2b3e', '#2aad27', '#cb8427', '#9c2bc1', '#ffd326', '#7b7b7b'];
+    const hotelHEX = '#2a81cb';
+
+    let timelineHTML = data.timeline.map((item, idx) => {
+        let isHotel = item.activity.includes("Hotel") || item.activity.includes("숙소") || item.activity.includes("호텔") || (item.desc && (item.desc.includes("Hotel") || item.desc.includes("숙소") || item.desc.includes("호텔")));
+        let dotColor = isHotel ? hotelHEX : mainHEX[idx % mainHEX.length];
+        
+        return `
+        <div class="timeline-item" style="--dot-color: ${dotColor}">
             <span class="time">${item.time}</span>
             <div class="activity">
                 <strong>${item.activity}</strong>
@@ -233,7 +214,7 @@ function openDayModal(day) {
                 ${item.link ? `<a href="${item.link}" target="_blank" class="reserve-link">한국어 예매 바로가기 &rarr;</a>` : ''}
             </div>
         </div>
-    `).join('');
+    `;}).join('');
 
     let costsHTML = data.costs.map(cost => `
         <tr>
@@ -307,14 +288,13 @@ function initMap(coords) {
         attribution: '© OpenStreetMap contributors'
     }).addTo(activeMap);
 
-    const markerColors = ['red', 'green', 'orange', 'violet', 'gold', 'grey'];
+    const mainColors = ['red', 'green', 'orange', 'violet', 'gold', 'grey'];
+    const hotelColor = 'blue';
+
     const latlngs = coords.map((c, idx) => {
-        let color;
-        if (c.name.includes("Hotel") || c.name.includes("숙소")) {
-            color = 'blue'; // Unified color for accommodation
-        } else {
-            color = markerColors[idx % markerColors.length];
-        }
+        let isHotel = c.name.includes("Hotel") || c.name.includes("숙소") || c.name.includes("호텔");
+        let color = isHotel ? hotelColor : mainColors[idx % mainColors.length];
+
         const customIcon = new L.Icon({
             iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-' + color + '.png',
             shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
