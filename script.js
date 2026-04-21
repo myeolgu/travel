@@ -9,17 +9,17 @@ const itineraryData = {
             { name: "H10 Cubik", lat: 41.3879, lon: 2.1731 }
         ],
         timeline: [
-            { time: "19:10", activity: "BCN 공항 도착 (Asiana/T'way)", desc: "직항 항공편(OZ511/TW407) 도착 기준", link: "https://m.flyasiana.com/C/KR/KO/index" },
+            { time: "19:10", activity: "BCN 공항 도착 (Asiana)", desc: "직항 항공편(OZ511) 도착 기준", link: "https://m.flyasiana.com/C/KR/KO/index" },
             { time: "20:30", activity: "공항 -> 시내 이동", desc: "도착 후 우버(Uber) 또는 프리나우(FREENOW) 앱을 이용하여 숙소로 이동 (약 42유로)" },
             { time: "21:30", activity: "호텔 체크인 및 늦은 저녁", desc: "H10 Cubik 체크인 및 호텔 인근 테라스 바에서 카바(Cava) 한 잔" }
         ],
         dining: [
-            { name: "Vinitus (비니투스)", type: "Tapas", desc: "권혁수 맛집으로 유명한 타파스 성지. 맛조개와 꿀대구 필수." },
-            { name: "Solraig", type: "Modern", desc: "깔끔하고 세련된 지중해식 요리." }
+            { name: "Vinitus (비니투스)", type: "Tapas", desc: "맛조개와 꿀대구 필수 맛집." }
         ],
         costs: [
             { item: "공항 -> 시내 이동 (Uber)", krw: "72,576원" },
-            { item: "호텔 인근 석식 (2인)", krw: "75,000원" }
+            { item: "호텔 인근 석식 (2인)", krw: "75,000원" },
+            { item: "현지 관광세 (City Tax/1박)", krw: "28,500원" }
         ]
     },
     2: {
@@ -42,16 +42,16 @@ const itineraryData = {
             { time: "22:30", activity: "숙소 복귀", desc: "H10 Cubik 도착 및 휴식" }
         ],
         dining: [
-            { name: "Ciudad Condal (시우다드 콘달)", type: "Tapas", desc: "언제나 북적이는 바르셀로나 최고의 타파스 명소." },
-            { name: "Botafumeiro", type: "Seafood", desc: "그라시아 지구의 럭셔리한 해산물 전문점." }
+            { name: "Ciudad Condal (시우다드 콘달)", type: "Tapas", desc: "언제나 북적이는 바르셀로나 최고의 타파스 명소." }
         ],
         costs: [
-            { item: "식비 (식사+간식/2인)", krw: "180,000원" }
+            { item: "식비 및 간식 (2인)", krw: "180,000원" },
+            { item: "현지 관광세 (City Tax/1박)", krw: "28,500원" }
         ]
     },
     3: {
         title: "Day 03: Intensive Gaudi & Night Walk",
-        subtitle: "2027년 4월 20일 - 에두와 함께하는 바르셀로나의 낮과 밤",
+        subtitle: "2027년 4월 20일 - 가우디 집중 투어 & 야경",
         coords: [
             { name: "H10 Cubik (출발)", lat: 41.3879, lon: 2.1731 },
             { name: "Meeting: El Fornet Cafe", lat: 41.3918, lon: 2.1652 },
@@ -77,16 +77,15 @@ const itineraryData = {
             { name: "El Fornet", type: "Bakery/Cafe", desc: "투어 시작 전 즐기는 바르셀로나의 커피." }
         ],
         costs: [
-            { item: "에두 주간 집중 투어비 (2인)", krw: "190,884원" },
-            { item: "에두 야간 산책 투어비 (2인)", krw: "61,950원" },
-            { item: "명소 입장권 (성당+구엘/현지 지불/2인)", krw: "152,064원" },
-            { item: "택시 및 로컬 중식/카페 (현지 지불/2인)", krw: "93,312원" },
-            { item: "석식 및 기타 (2인)", krw: "90,000원" }
+            { item: "에두 주간/야간 투어비 (2인)", krw: "252,834원" },
+            { item: "명소 입장권 (성당+구엘/2인)", krw: "152,064원" },
+            { item: "식비 및 기타 (2인)", krw: "183,312원" },
+            { item: "현지 관광세 (City Tax/1박)", krw: "28,500원" }
         ]
     },
     4: {
-        title: "Day 04: Montserrat & Sitges (NomadBenz)",
-        subtitle: "2027년 4월 21일 - 산과 바다를 동시에 즐기는 힐링 데이",
+        title: "Day 04: Montserrat & Sitges",
+        subtitle: "2027년 4월 21일 - 산과 바다가 함께하는 하루",
         coords: [
             { name: "H10 Cubik (출발)", lat: 41.3879, lon: 2.1731 },
             { name: "Meeting: Mandarin Oriental Hotel", lat: 41.3915, lon: 2.1648 },
@@ -112,10 +111,10 @@ const itineraryData = {
             { name: "Montserrat Cafeteria", type: "Quick", desc: "수도원 조망과 함께하는 간단한 런치." }
         ],
         costs: [
-            { item: "노마드벤츠 몬+시 투어비 (2인)", krw: "152,708원" },
-            { item: "수도원 풀패키지 입장권 (현지/2인)", krw: "120,960원" },
-            { item: "현지 중식 및 카페 (2인)", krw: "86,400원" },
-            { item: "석식 및 기타 (2인)", krw: "90,000원" }
+            { item: "몬세라트+시체스 투어비 (2인)", krw: "152,708원" },
+            { item: "수도원 입장 및 중식 (2인)", krw: "207,360원" },
+            { item: "석식 및 기타 (2인)", krw: "90,000원" },
+            { item: "현지 관광세 (City Tax/1박)", krw: "28,500원" }
         ]
     },
     5: {
@@ -125,7 +124,7 @@ const itineraryData = {
             { name: "H10 Cubik (출발)", lat: 41.3879, lon: 2.1731 },
             { name: "Picasso Museum (패스수령)", lat: 41.3852, lon: 2.1809 },
             { name: "Gothic Quarter (중식)", lat: 41.3833, lon: 2.1764 },
-            { name: "MACBA & CCCB", lat: 41.3831, lon: 2.1668 },
+            { name: "MACBA / CCCB", lat: 41.3831, lon: 2.1668 },
             { name: "Tapies Foundation", lat: 41.3917, lon: 2.1648 },
             { name: "Placa Catalunya (석식)", lat: 41.3871, lon: 2.1700 },
             { name: "H10 Cubik (복귀)", lat: 41.3879, lon: 2.1731 }
@@ -145,12 +144,13 @@ const itineraryData = {
         ],
         costs: [
             { item: "아트켓 6대 미술관 패스 (2인)", krw: "128,356원" },
-            { item: "현지 식비 및 기타 (2인)", krw: "207,360원" }
+            { item: "전일 식비 및 기타 (2인)", krw: "207,360원" },
+            { item: "현지 관광세 (City Tax/1박)", krw: "28,500원" }
         ]
     },
     6: {
         title: "Day 06: Sant Jordi & Montjuic Art",
-        subtitle: "2027년 4월 23일 - 장미와 책, 그리고 예술의 언덕",
+        subtitle: "2027년 4월 23일 - 장미의 축제 & 몬주익",
         coords: [
             { name: "H10 Cubik (출발)", lat: 41.3879, lon: 2.1731 },
             { name: "MNAC (국립미술관)", lat: 41.3686, lon: 2.1534 },
@@ -172,16 +172,17 @@ const itineraryData = {
             { name: "Cervecería Catalana", type: "Tapas", desc: "축제일의 활기찬 분위기 속에서 즐기는 최고의 타파스." }
         ],
         costs: [
-            { item: "페스티벌 스페셜 디너 (2인)", krw: "240,000원" }
+            { item: "산 조르디 디너 및 축제 경비 (2인)", krw: "240,000원" },
+            { item: "현지 관광세 (City Tax/1박)", krw: "28,500원" }
         ]
     },
     7: {
         title: "Day 07: Adios Bcn",
-        subtitle: "2027년 4월 24일 - 마지막 지중해",
+        subtitle: "2027년 4월 24일 - 마지막 안녕",
         coords: [
             { name: "H10 Cubik (출발)", lat: 41.3879, lon: 2.1731 },
             { name: "Barceloneta Beach", lat: 41.3784, lon: 2.1925 },
-            { name: "7 Portes", lat: 41.3820, lon: 2.1834 },
+            { name: "7 Portes (빠에야)", lat: 41.3820, lon: 2.1834 },
             { name: "Ciutadella Park", lat: 41.3887, lon: 2.1887 },
             { name: "Hotel (Luggage pick-up)", lat: 41.3879, lon: 2.1731 },
             { name: "BCN Airport", lat: 41.2974, lon: 2.0833 }
@@ -200,8 +201,7 @@ const itineraryData = {
             { name: "Can Majó", type: "Seafood", desc: "바르셀로네타 해변 바로 앞, 신선한 해산물이 가득한 곳." }
         ],
         costs: [
-            { item: "마지막 만찬 (2인)", krw: "150,000원" },
-            { item: "공항 이동 (Uber/Taxi)", krw: "72,000원" }
+            { item: "식비 및 공항 이동 (2인)", krw: "222,000원" }
         ]
     }
 };
@@ -223,9 +223,16 @@ function openDayModal(day) {
     
     
 
-    const cssHEX = ['#cb2b3e', '#2a81cb', '#2aad27', '#cb8427', '#9c2bc1', '#ffd326'];
-    let timelineHTML = data.timeline.map((item, idx) => `
-        <div class="timeline-item" style="--dot-color: ${cssHEX[idx % cssHEX.length]}">
+    // Unified Color Palette
+    const mainHEX = ['#cb2b3e', '#2aad27', '#cb8427', '#9c2bc1', '#ffd326', '#7b7b7b'];
+    const hotelHEX = '#2a81cb';
+
+    let timelineHTML = data.timeline.map((item, idx) => {
+        let isHotel = item.activity.includes("Hotel") || item.activity.includes("숙소") || item.activity.includes("호텔") || (item.desc && (item.desc.includes("Hotel") || item.desc.includes("숙소") || item.desc.includes("호텔")));
+        let dotColor = isHotel ? hotelHEX : mainHEX[idx % mainHEX.length];
+        
+        return `
+        <div class="timeline-item" style="--dot-color: ${dotColor}">
             <span class="time">${item.time}</span>
             <div class="activity">
                 <strong>${item.activity}</strong>
@@ -233,7 +240,7 @@ function openDayModal(day) {
                 ${item.link ? `<a href="${item.link}" target="_blank" class="reserve-link">한국어 예매 바로가기 &rarr;</a>` : ''}
             </div>
         </div>
-    `).join('');
+    `;}).join('');
 
     let costsHTML = data.costs.map(cost => `
         <tr>
@@ -307,14 +314,13 @@ function initMap(coords) {
         attribution: '© OpenStreetMap contributors'
     }).addTo(activeMap);
 
-    const markerColors = ['red', 'green', 'orange', 'violet', 'gold', 'grey'];
+    const mainColors = ['red', 'green', 'orange', 'violet', 'gold', 'grey'];
+    const hotelColor = 'blue';
+
     const latlngs = coords.map((c, idx) => {
-        let color;
-        if (c.name.includes("Hotel") || c.name.includes("숙소")) {
-            color = 'blue'; // Unified color for accommodation
-        } else {
-            color = markerColors[idx % markerColors.length];
-        }
+        let isHotel = c.name.includes("Hotel") || c.name.includes("숙소") || c.name.includes("호텔");
+        let color = isHotel ? hotelColor : mainColors[idx % mainColors.length];
+
         const customIcon = new L.Icon({
             iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-' + color + '.png',
             shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
