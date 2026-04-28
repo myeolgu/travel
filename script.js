@@ -228,7 +228,10 @@ function openDayModal(day) {
     const hotelHEX = '#2a81cb';
 
     let timelineHTML = data.timeline.map((item, idx) => {
-        let isHotel = item.activity.includes("Hotel") || item.activity.includes("숙소") || item.activity.includes("호텔") || (item.desc && (item.desc.includes("Hotel") || item.desc.includes("숙소") || item.desc.includes("호텔")));
+        const hotelKeywords = ["Hotel", "숙소", "호텔", "Cubik", "H10"];
+        const isHotel = hotelKeywords.some(kw => 
+            item.activity.includes(kw) || (item.desc && item.desc.includes(kw))
+        );
         let dotColor = isHotel ? hotelHEX : mainHEX[idx % mainHEX.length];
         
         return `
@@ -318,7 +321,8 @@ function initMap(coords) {
     const hotelColor = 'blue';
 
     const latlngs = coords.map((c, idx) => {
-        let isHotel = c.name.includes("Hotel") || c.name.includes("숙소") || c.name.includes("호텔");
+        const hotelKeywords = ["Hotel", "숙소", "호텔", "Cubik", "H10"];
+        const isHotel = hotelKeywords.some(kw => c.name.includes(kw));
         let color = isHotel ? hotelColor : mainColors[idx % mainColors.length];
 
         const customIcon = new L.Icon({
