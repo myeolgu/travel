@@ -9,7 +9,7 @@ const itineraryData = {
             { name: "H10 Cubik", lat: 41.3879, lon: 2.1731 }
         ],
         timeline: [
-            { time: "19:10", activity: "BCN 공항 도착 (Asiana)", desc: "직항 항공편(OZ511) 도착 기준", link: "https://m.flyasiana.com/C/KR/KO/index" },
+            { time: "19:10", activity: "BCN 공항 도착 (Lufthansa)", desc: "루프트한자 경유편 도착 기준", link: "https://www.lufthansa.com/" },
             { time: "20:30", activity: "공항 -> 시내 이동", desc: "도착 후 우버(Uber) 또는 프리나우(FREENOW) 앱을 이용하여 숙소로 이동 (약 42유로)" },
             { time: "21:30", activity: "호텔 체크인 및 늦은 저녁", desc: "H10 Cubik 체크인 및 호텔 인근 테라스 바에서 카바(Cava) 한 잔" }
         ],
@@ -194,7 +194,7 @@ const itineraryData = {
             { time: "14:30", activity: "시우타데야 공원 산책", desc: "공원 산책 및 개선문 근처 여유로운 카페 타임" },
             { time: "16:30", activity: "숙소 이동 및 짐 찾기", desc: "호텔로 돌아와 보관된 짐 수령 및 공항 이동 준비" },
             { time: "17:00", activity: "공항으로 출발", desc: "BCN 공항 T1으로 출발 (공항까지 약 30-40분 소요)" },
-            { time: "20:50", activity: "바르셀로나 출발", desc: "아시아나 직항(OZ512) 또는 경유편 탑승 (3시간 전 공항 도착 권장)" }
+            { time: "20:50", activity: "바르셀로나 출발", desc: "루프트한자 경유편 탑승 (3시간 전 공항 도착 권장)" }
         ],
         dining: [
             { name: "7 Portes", type: "Classical", desc: "바르셀로나의 마지막을 장식할 정통 빠에야 식당." },
