@@ -1,521 +1,405 @@
-// Detailed Itinerary Data (Costs are for 2 PEOPLE)
+﻿// Detailed Itinerary Data (Costs are for 2 PEOPLE)
 const itineraryData = {
-    1: {
-        title: "Day 01: Hola Barcelona",
-        subtitle: "2027년 4월 18일 - 도착 및 휴식",
-        coords: [
-            { name: "BCN Airport", lat: 41.2974, lon: 2.0833 },
-            { name: "시내 이동 중 (Placa Espanya)", lat: 41.3749, lon: 2.1487 },
-            { name: "H10 Cubik", lat: 41.3879, lon: 2.1731 }
-        ],
-        timeline: [
-            { time: "19:10", activity: "BCN 공항 도착 (Lufthansa)", desc: "루프트한자 경유편 도착 기준", link: "https://www.lufthansa.com/" },
-            { time: "20:30", activity: "공항 -> 시내 이동", desc: "도착 후 우버(Uber) 또는 프리나우(FREENOW) 앱을 이용하여 숙소로 이동 (약 42유로)" },
-            { time: "21:30", activity: "호텔 체크인 및 늦은 저녁", desc: "H10 Cubik 체크인 및 호텔 인근 테라스 바에서 카바(Cava) 한 잔" }
-        ],
-        dining: [
-            { name: "Vinitus (비니투스)", type: "Tapas", desc: "맛조개와 꿀대구 필수 맛집." }
-        ],
-        costs: [
-            { item: "공항 -> 시내 이동 (Uber)", krw: "72,576원" },
-            { item: "호텔 인근 석식 (2인)", krw: "75,000원" },
-            { item: "현지 관광세 (City Tax/1박)", krw: "28,500원" }
-        ]
-    },
-    2: {
-        title: "Day 02: Shopping Therapy",
-        subtitle: "2027년 4월 19일 - 에이샴플레 & 그라시아",
-        coords: [
-            { name: "H10 Cubik (출발)", lat: 41.3879, lon: 2.1731 },
-            { name: "Passeig de Gràcia", lat: 41.3916, lon: 2.1649 },
-            { name: "Boqueria Market", lat: 41.3817, lon: 2.1714 },
-            { name: "Gracia District", lat: 41.4031, lon: 2.1572 },
-            { name: "Ciudad Condal (칵테일)", lat: 41.3887, lon: 2.1666 },
-            { name: "H10 Cubik (도착)", lat: 41.3879, lon: 2.1731 }
-        ],
-        timeline: [
-            { time: "09:50", activity: "숙소 출발", desc: "도보로 명품 거리 이동" },
-            { time: "10:00", activity: "파세이그 드 그라시아", desc: "명품 쇼핑 및 윈도우 쇼핑" },
-            { time: "13:00", activity: "보케리아 시장 인근 중식", desc: "다양한 신선 식재료와 활기찬 시장 분위기" },
-            { time: "15:00", activity: "그라시아 지구", desc: "힙한 브런치 카페와 소품샵 탐방" },
-            { time: "20:00", activity: "여유로운 칵테일 바", desc: "현지인들처럼 타파스와 cocktail 즐기기" },
-            { time: "22:30", activity: "숙소 복귀", desc: "H10 Cubik 도착 및 휴식" }
-        ],
-        dining: [
-            { name: "Ciudad Condal (시우다드 콘달)", type: "Tapas", desc: "언제나 북적이는 바르셀로나 최고의 타파스 명소." }
-        ],
-        costs: [
-            { item: "식비 및 간식 (2인)", krw: "180,000원" },
-            { item: "현지 관광세 (City Tax/1박)", krw: "28,500원" }
-        ]
-    },
-    3: {
-        title: "Day 03: Intensive Gaudi & Night Walk",
-        subtitle: "2027년 4월 20일 - 가우디 집중 투어 & 야경",
-        coords: [
-            { name: "H10 Cubik (출발)", lat: 41.3879, lon: 2.1731 },
-            { name: "Meeting: El Fornet Cafe", lat: 41.3918, lon: 2.1652 },
-            { name: "Casa Batllo & Milà (외부)", lat: 41.3916, lon: 2.1649 },
-            { name: "Park Guell (내부)", lat: 41.4145, lon: 2.1527 },
-            { name: "Eixample (Edu 추천 로컬 점심)", lat: 41.3950, lon: 2.1620 },
-            { name: "Sagrada Familia (내부)", lat: 41.4036, lon: 2.1744 },
-            { name: "Primark (Night Tour Meeting)", lat: 41.3862, lon: 2.1705 },
-            { name: "H10 Cubik (복귀)", lat: 41.3879, lon: 2.1731 }
-        ],
-        timeline: [
-            { time: "08:10", activity: "숙소 출발", desc: "H10 Cubik에서 도보로 미팅 장소 이동" },
-            { time: "08:20", activity: "미팅: El Fornet Cafe", desc: "까사 바트요 인근 카페 미팅 (에두 주간 투어 시작)", link: "https://experiences.myrealtrip.com/products/3860315" },
-            { time: "09:00", activity: "가우디 집중 산책", desc: "현지인 가이드 에두와 함께하는 카사 바트요, 카사 밀라 외부 설명" },
-            { time: "13:00", activity: "에두 추천 로컬 점심", desc: "현지인 추천 맛집에서 즐기는 오찬 (1인 약 21유로)" },
-            { time: "15:30", activity: "사그라다 파밀리아 투어", desc: "성당 내부 집중 투어 및 상세 설명", link: "https://experiences.myrealtrip.com/products/3860315" },
-            { time: "18:00", activity: "주간 투어 종료 및 휴식", desc: "인근에서 가벼운 휴식 및 개인 정비" },
-            { time: "19:30", activity: "야간 산책 투어 미팅", desc: "카탈루냐 광장 Primark 앞 미팅 (밤이 더 아름다운 바르셀로나 산책)", link: "https://experiences.myrealtrip.com/products/3860316" },
-            { time: "21:30", activity: "투어 종료 및 숙소 복귀", desc: "바르셀로나의 야경을 감상하며 H10 Cubik로 복귀" }
-        ],
-        dining: [
-            { name: "Edu's Choice Local Spot", type: "Traditional", desc: "현지 가이드 에두가 추천하는 숨은 로컬 맛집." },
-            { name: "El Fornet", type: "Bakery/Cafe", desc: "투어 시작 전 즐기는 바르셀로나의 커피." }
-        ],
-        costs: [
-            { item: "에두 주간/야간 투어비 (2인)", krw: "252,834원" },
-            { item: "명소 입장권 (성당+구엘/2인)", krw: "152,064원" },
-            { item: "식비 및 기타 (2인)", krw: "183,312원" },
-            { item: "현지 관광세 (City Tax/1박)", krw: "28,500원" }
-        ]
-    },
-    4: {
-        title: "Day 04: Montserrat & Sitges",
-        subtitle: "2027년 4월 21일 - 산과 바다가 함께하는 하루",
-        coords: [
-            { name: "H10 Cubik (출발)", lat: 41.3879, lon: 2.1731 },
-            { name: "Meeting: Mandarin Oriental Hotel", lat: 41.3915, lon: 2.1648 },
-            { name: "Montserrat", lat: 41.5933, lon: 1.8361 },
-            { name: "Montserrat Monastery", lat: 41.5890, lon: 1.8340 },
-            { name: "Sitges", lat: 41.2333, lon: 1.8105 },
-            { name: "Pg. de Gracia (도착)", lat: 41.3895, lon: 2.1661 },
-            { name: "H10 Cubik (복귀)", lat: 41.3879, lon: 2.1731 }
-        ],
-        timeline: [
-            { time: "07:30", activity: "숙소 출발", desc: "H10 Cubik에서 도보로 투어 미팅 장소 이동" },
-            { time: "07:40", activity: "미팅: 만다린 오리엔탈 호텔 앞", desc: "Pg. de Gràcia, 38-40 미팅 (노마드벤츠 전용 차량 탑승)", link: "https://experiences.myrealtrip.com/products/3517343" },
-            { time: "07:50", activity: "몬세라트로 출발", desc: "차량 이동 중 가이드의 역사 및 문화 설명 청취" },
-            { time: "09:10", activity: "몬세라트 수도원 도착", desc: "검은 성모상 및 수도원 성당 관람. 소년 성가대 합창 감상 (현지 상황에 따름)" },
-            { time: "12:30", activity: "자유 시간 및 중식", desc: "몬세라트의 기괴한 암석 절경을 감상하며 가벼운 식사" },
-            { time: "13:30", activity: "시체스(Sitges) 이동", desc: "지중해의 진주라 불리는 아름다운 해안 도시 시체스로 이동" },
-            { time: "14:40", activity: "시체스 관람 및 산책", desc: "해변 감상 및 드라마 촬영지 탐방, 자유로운 카페 타임" },
-            { time: "16:30", activity: "바르셀로나 시내로 출발", desc: "투어를 마무리하며 시내로 복귀" },
-            { time: "17:30", activity: "시내 하차 및 숙소 복귀", desc: "그라시아 거리 하차 후 H10 Cubik로 복귀하여 휴식" }
-        ],
-        dining: [
-            { name: "Sitges Local Tapas", type: "Casual", desc: "해변 근처에서 즐기는 신선한 타파스와 카바." },
-            { name: "Montserrat Cafeteria", type: "Quick", desc: "수도원 조망과 함께하는 간단한 런치." }
-        ],
-        costs: [
-            { item: "몬세라트+시체스 투어비 (2인)", krw: "152,708원" },
-            { item: "수도원 입장 및 중식 (2인)", krw: "207,360원" },
-            { item: "석식 및 기타 (2인)", krw: "90,000원" },
-            { item: "현지 관광세 (City Tax/1박)", krw: "28,500원" }
-        ]
-    },
-    5: {
-        title: "Day 05: Art in the City Heart",
-        subtitle: "2027년 4월 22일 - 도심 속 미술관 탐방",
-        coords: [
-            { name: "H10 Cubik (출발)", lat: 41.3879, lon: 2.1731 },
-            { name: "Picasso Museum (패스수령)", lat: 41.3852, lon: 2.1809 },
-            { name: "Gothic Quarter (중식)", lat: 41.3833, lon: 2.1764 },
-            { name: "MACBA / CCCB", lat: 41.3831, lon: 2.1668 },
-            { name: "Tapies Foundation", lat: 41.3917, lon: 2.1648 },
-            { name: "Placa Catalunya (석식)", lat: 41.3871, lon: 2.1700 },
-            { name: "H10 Cubik (복귀)", lat: 41.3879, lon: 2.1731 }
-        ],
-        timeline: [
-            { time: "10:30", activity: "숙소 출발", desc: "H10 Cubik에서 출발하여 보르 지구로 이동" },
-            { time: "11:00", activity: "피카소 미술관 (시작)", desc: "오피스에서 아트켓 패스포트 수령 후 첫 관람 시작", link: "https://experiences.myrealtrip.com/products/5820926" },
-            { time: "13:00", activity: "고딕 지구 산책 및 중식", desc: "고딕 지구의 미로 같은 골목을 탐방하며 여유로운 오찬" },
-            { time: "15:00", activity: "MACBA & CCCB", desc: "라발 지구의 현대 미술관과 문화 센터에서 예술적 영감 충전" },
-            { time: "17:30", activity: "안토니 타피에스 미술관", desc: "에이샴플레로 이동하여 타피에스의 철학적인 작품 세계 관람" },
-            { time: "19:30", activity: "카탈루냐 광장 복귀 및 석식", desc: "도시의 중심 광장으로 돌아와 활기찬 분위기 속에서 저녁 식사" },
-            { time: "21:30", activity: "숙소 복귀 및 휴식", desc: "H10 Cubik로 복귀하여 하루를 마무리" }
-        ],
-        dining: [
-            { name: "Can Culleretes", type: "Traditional", desc: "고딕 지구의 유서 깊은 식당. 바르셀로나에서 가장 오래된 전통 요리의 맛." },
-            { name: "El Nacional", type: "Gastronomy Hall", desc: "카탈루냐 광장 인근, 아름다운 모더니즘 공간에서 즐기는 다양한 스페인 미식." }
-        ],
-        costs: [
-            { item: "아트켓 6대 미술관 패스 (2인)", krw: "128,356원" },
-            { item: "전일 식비 및 기타 (2인)", krw: "207,360원" },
-            { item: "현지 관광세 (City Tax/1박)", krw: "28,500원" }
-        ]
-    },
-    6: {
-        title: "Day 06: Sant Jordi & Montjuic Art",
-        subtitle: "2027년 4월 23일 - 장미의 축제 & 몬주익",
-        coords: [
-            { name: "H10 Cubik (출발)", lat: 41.3879, lon: 2.1731 },
-            { name: "MNAC (국립미술관)", lat: 41.3686, lon: 2.1534 },
-            { name: "Pg. de Gracia (축제거리)", lat: 41.3895, lon: 2.1661 },
-            { name: "Las Ramblas (장미시장)", lat: 41.3813, lon: 2.1732 },
-            { name: "H10 Cubik (복귀)", lat: 41.3879, lon: 2.1731 }
-        ],
-        timeline: [
-            { time: "09:00", activity: "숙소 출발", desc: "H10 Cubik에서 몬주익 언덕으로 이동" },
-            { time: "09:30", activity: "몬주익 언덕 이동 및 MNAC 관람", desc: "아트켓 패스로 카탈루냐 국립 미술관 입장. 장엄한 로마네스크 벽화 감상" },
-            { time: "12:30", activity: "시내 복귀 및 축제 오찬", desc: "몬주익 관람 후 시내로 복귀하여 산 조르디 축제 분위기 속에서 점심 식사" },
-            { time: "14:30", activity: "Sant Jordi 축제 만끽", desc: "람블라스와 그라시아 거리를 메운 장미와 책 노점 구경 (사랑하는 사람에게 장미 선물)" },
-            { time: "17:30", activity: "축제 기념품 쇼핑", desc: "특별한 Sant Jordi 에디션 도서나 소품 쇼핑 및 건물 외관 장장식 구경" },
-            { time: "20:00", activity: "페스티벌 스페셜 디너", desc: "숙소 인근의 고품격 레스토랑에서 즐기는 특별한 저녁 식사" },
-            { time: "22:00", activity: "숙소 복귀 및 마지막 밤", desc: "H10 Cubik에서 바르셀로나 여정의 마지막 밤 마무리" }
-        ],
-        dining: [
-            { name: "SOLC", type: "Farm-to-table", desc: "신선한 로컬 소싱 식재료를 사용한 고품격 다이닝." },
-            { name: "Cervecería Catalana", type: "Tapas", desc: "축제일의 활기찬 분위기 속에서 즐기는 최고의 타파스." }
-        ],
-        costs: [
-            { item: "산 조르디 디너 및 축제 경비 (2인)", krw: "240,000원" },
-            { item: "현지 관광세 (City Tax/1박)", krw: "28,500원" }
-        ]
-    },
-    7: {
-        title: "Day 07: Adios Bcn",
-        subtitle: "2027년 4월 24일 - 마지막 안녕",
-        coords: [
-            { name: "H10 Cubik (출발)", lat: 41.3879, lon: 2.1731 },
-            { name: "Barceloneta Beach", lat: 41.3784, lon: 2.1925 },
-            { name: "7 Portes (빠에야)", lat: 41.3820, lon: 2.1834 },
-            { name: "Ciutadella Park", lat: 41.3887, lon: 2.1887 },
-            { name: "Hotel (Luggage pick-up)", lat: 41.3879, lon: 2.1731 },
-            { name: "BCN Airport", lat: 41.2974, lon: 2.0833 }
-        ],
-        timeline: [
-            { time: "09:30", activity: "숙소 체크아웃", desc: "H10 Cubik 체크아웃 및 짐 보관" },
-            { time: "10:30", activity: "바르셀로네타 해변", desc: "지중해의 시원한 산책과 함께하는 바르셀로나의 마지막 오전" },
-            { time: "12:30", activity: "피날레 빠에야", desc: "7포르테스(7 Portes)에서 즐기는 정통 빠에야 오찬" },
-            { time: "14:30", activity: "시우타데야 공원 산책", desc: "공원 산책 및 개선문 근처 여유로운 카페 타임" },
-            { time: "16:30", activity: "숙소 이동 및 짐 찾기", desc: "호텔로 돌아와 보관된 짐 수령 및 공항 이동 준비" },
-            { time: "17:00", activity: "공항으로 출발", desc: "BCN 공항 T1으로 출발 (공항까지 약 30-40분 소요)" },
-            { time: "20:50", activity: "바르셀로나 출발", desc: "루프트한자 경유편 탑승 (3시간 전 공항 도착 권장)" }
-        ],
-        dining: [
-            { name: "7 Portes", type: "Classical", desc: "바르셀로나의 마지막을 장식할 정통 빠에야 식당." },
-            { name: "Can Majó", type: "Seafood", desc: "바르셀로네타 해변 바로 앞, 신선한 해산물이 가득한 곳." }
-        ],
-        costs: [
-            { item: "식비 및 공항 이동 (2인)", krw: "222,000원" }
-        ]
-    }
+  1: {
+    title: "Day 01: Hola Barcelona",
+    subtitle: "2027년 4월 18일 - 도착 및 체크인",
+    coords: [
+      { name: "BCN Airport", lat: 41.2974, lon: 2.0833 },
+      { name: "Plaza Urquinaona", lat: 41.38927937281525, lon: 2.172547428550298 },
+      { name: "H10 Urquinaona Plaza Hotel", lat: 41.38927937281525, lon: 2.172547428550298 }
+    ],
+    timeline: [
+      { time: "19:10", activity: "BCN 공항 도착", desc: "입국 후 시내로 이동합니다." },
+      { time: "20:30", activity: "공항 -> 호텔 이동", desc: "택시 또는 차량 호출로 호텔 이동" },
+      { time: "21:30", activity: "호텔 체크인", desc: "H10 Urquinaona Plaza Hotel 체크인" }
+    ],
+    dining: [{ name: "Vinitus", type: "Tapas", desc: "가벼운 타파스 추천" }],
+    costs: [
+      { item: "공항 이동", krw: "₩72,576" },
+      { item: "저녁 식사", krw: "₩75,000" },
+      { item: "도시세", krw: "₩32,480" }
+    ]
+  },
+  2: {
+    title: "Day 02: Shopping Therapy",
+    subtitle: "2027년 4월 19일 - Passeig de Gracia",
+    coords: [
+      { name: "H10 Urquinaona Plaza Hotel", lat: 41.38927937281525, lon: 2.172547428550298 },
+      { name: "Passeig de Gracia", lat: 41.3916, lon: 2.1649 },
+      { name: "Boqueria Market", lat: 41.3817, lon: 2.1714 }
+    ],
+    timeline: [
+      { time: "10:00", activity: "쇼핑", desc: "Passeig de Gracia 중심" },
+      { time: "13:00", activity: "점심", desc: "보케리아 마켓" },
+      { time: "22:00", activity: "숙소 복귀", desc: "호텔 휴식" }
+    ],
+    dining: [{ name: "Ciudad Condal", type: "Tapas", desc: "인기 타파스" }],
+    costs: [
+      { item: "식비", krw: "₩180,000" },
+      { item: "도시세", krw: "₩32,480" }
+    ]
+  },
+  3: {
+    title: "Day 03: Gaudi Day",
+    subtitle: "2027년 4월 20일 - Sagrada Familia & Eixample",
+    coords: [
+      { name: "H10 Urquinaona Plaza Hotel", lat: 41.38927937281525, lon: 2.172547428550298 },
+      { name: "Sagrada Familia", lat: 41.4036, lon: 2.1744 },
+      { name: "Casa Batllo", lat: 41.3916, lon: 2.1649 }
+    ],
+    timeline: [
+      { time: "09:00", activity: "가우디 투어", desc: "사그라다 파밀리아 포함" },
+      { time: "15:00", activity: "에이샴플레 산책", desc: "건축 스팟 탐방" }
+    ],
+    dining: [{ name: "Local Bistro", type: "Casual", desc: "투어 동선 내 식사" }],
+    costs: [
+      { item: "투어", krw: "₩252,834" },
+      { item: "입장권", krw: "₩152,064" },
+      { item: "도시세", krw: "₩32,480" }
+    ]
+  },
+  4: {
+    title: "Day 04: Montserrat & Sitges",
+    subtitle: "2027년 4월 21일 - 근교 투어",
+    coords: [
+      { name: "H10 Urquinaona Plaza Hotel", lat: 41.38927937281525, lon: 2.172547428550298 },
+      { name: "Montserrat", lat: 41.5933, lon: 1.8361 },
+      { name: "Sitges", lat: 41.2333, lon: 1.8105 }
+    ],
+    timeline: [
+      { time: "07:40", activity: "투어 출발", desc: "미팅 후 차량 이동" },
+      { time: "17:30", activity: "시내 복귀", desc: "호텔 복귀" }
+    ],
+    dining: [{ name: "Sitges Tapas", type: "Casual", desc: "근교 식사" }],
+    costs: [
+      { item: "근교 투어", krw: "₩152,708" },
+      { item: "식비", krw: "₩90,000" },
+      { item: "도시세", krw: "₩32,480" }
+    ]
+  },
+  5: {
+    title: "Day 05: Art in the City Heart",
+    subtitle: "2027년 4월 22일 - El Born & Gothic Quarter",
+    coords: [
+      { name: "H10 Urquinaona Plaza Hotel", lat: 41.38927937281525, lon: 2.172547428550298 },
+      { name: "Picasso Museum", lat: 41.3852, lon: 2.1809 },
+      { name: "Gothic Quarter", lat: 41.3833, lon: 2.1764 }
+    ],
+    timeline: [
+      { time: "11:00", activity: "미술관 탐방", desc: "피카소 뮤지엄" },
+      { time: "21:30", activity: "숙소 복귀", desc: "호텔 휴식" }
+    ],
+    dining: [{ name: "Can Culleretes", type: "Traditional", desc: "고딕지구 전통 레스토랑" }],
+    costs: [
+      { item: "뮤지엄 패스", krw: "₩128,356" },
+      { item: "식비", krw: "₩207,360" },
+      { item: "도시세", krw: "₩32,480" }
+    ]
+  },
+  6: {
+    title: "Day 06: Sant Jordi & Montjuic Art",
+    subtitle: "2027년 4월 23일 - Montjuic",
+    coords: [
+      { name: "H10 Urquinaona Plaza Hotel", lat: 41.38927937281525, lon: 2.172547428550298 },
+      { name: "MNAC", lat: 41.3686, lon: 2.1534 },
+      { name: "Passeig de Gracia", lat: 41.3895, lon: 2.1661 }
+    ],
+    timeline: [
+      { time: "09:30", activity: "몬주익 이동", desc: "MNAC 관람" },
+      { time: "14:30", activity: "산 조르디", desc: "도심 축제 즐기기" }
+    ],
+    dining: [{ name: "SOLC", type: "Farm-to-table", desc: "산 조르디 디너" }],
+    costs: [
+      { item: "식비/활동", krw: "₩240,000" },
+      { item: "도시세", krw: "₩32,480" }
+    ]
+  },
+  7: {
+    title: "Day 07: Adios BCN",
+    subtitle: "2027년 4월 24일 - Barceloneta & 공항",
+    coords: [
+      { name: "H10 Urquinaona Plaza Hotel", lat: 41.38927937281525, lon: 2.172547428550298 },
+      { name: "Barceloneta Beach", lat: 41.3784, lon: 2.1925 },
+      { name: "BCN Airport", lat: 41.2974, lon: 2.0833 }
+    ],
+    timeline: [
+      { time: "09:30", activity: "체크아웃", desc: "짐 보관 후 이동" },
+      { time: "17:00", activity: "공항 이동", desc: "귀국편 탑승 준비" }
+    ],
+    dining: [{ name: "7 Portes", type: "Classical", desc: "마지막 점심" }],
+    costs: [{ item: "식비/이동", krw: "₩222,000" }]
+  }
 };
 
 let activeMap = null;
 
-// Modal Functions
 function openDayModal(day) {
-    const data = itineraryData[day];
-    if (!data) return;
+  const data = itineraryData[day];
+  if (!data) return;
 
-    const modal = document.getElementById('dayModal');
-    const body = document.getElementById('modalBody');
-    
-    let totalKRW = data.costs.reduce((acc, current) => {
-        let priceValue = current.krw.replace('원', '').replace(/,/g, '').trim();
-        return acc + (isNaN(priceValue) ? 0 : parseFloat(priceValue));
-    }, 0);
-    
-    
+  const modal = document.getElementById('dayModal');
+  const body = document.getElementById('modalBody');
 
-    // Unified Color Palette
-    const mainHEX = ['#cb2b3e', '#2aad27', '#cb8427', '#9c2bc1', '#ffd326', '#7b7b7b'];
-    const hotelHEX = '#2a81cb';
+  const totalKRW = data.costs.reduce((acc, current) => {
+    const priceValue = parseInt(String(current.krw).replace(/[^0-9]/g, ''), 10) || 0;
+    return acc + priceValue;
+  }, 0);
 
-    let timelineHTML = data.timeline.map((item, idx) => {
-        const hotelKeywords = ["Hotel", "숙소", "호텔", "Cubik", "H10"];
-        const isHotel = hotelKeywords.some(kw => 
-            item.activity.includes(kw) || (item.desc && item.desc.includes(kw))
-        );
-        let dotColor = isHotel ? hotelHEX : mainHEX[idx % mainHEX.length];
-        
-        return `
-        <div class="timeline-item" style="--dot-color: ${dotColor}">
-            <span class="time">${item.time}</span>
-            <div class="activity">
-                <strong>${item.activity}</strong>
-                <p>${item.desc}</p>
-                ${item.link ? `<a href="${item.link}" target="_blank" class="reserve-link">한국어 예매 바로가기 &rarr;</a>` : ''}
-            </div>
+  const mainHEX = ['#cb2b3e', '#2aad27', '#cb8427', '#9c2bc1', '#ffd326', '#7b7b7b'];
+  const hotelHEX = '#2a81cb';
+
+  const timelineHTML = data.timeline.map((item, idx) => {
+    const hotelKeywords = ['Hotel', '숙소', '호텔', 'H10'];
+    const isHotel = hotelKeywords.some((kw) => item.activity.includes(kw) || (item.desc && item.desc.includes(kw)));
+    const dotColor = isHotel ? hotelHEX : mainHEX[idx % mainHEX.length];
+
+    return `
+      <div class="timeline-item" style="--dot-color: ${dotColor}">
+        <span class="time">${item.time}</span>
+        <div class="activity">
+          <strong>${item.activity}</strong>
+          <p>${item.desc}</p>
+          ${item.link ? `<a href="${item.link}" target="_blank" class="reserve-link">예약 바로가기 &rarr;</a>` : ''}
         </div>
-    `;}).join('');
-
-    let costsHTML = data.costs.map(cost => `
-        <tr>
-            <td>${cost.item}</td>
-            <td style="color: var(--secondary); font-weight: 700;">${cost.krw}</td>
-            
-        </tr>
-    `).join('');
-
-    let diningHTML = data.dining ? data.dining.map(d => `
-        <div class="restaurant-item">
-            <strong>${d.name} <small>(${d.type})</small></strong>
-            <p>${d.desc}</p>
-        </div>
-    `).join('') : '<p>추천 식당 정보가 없습니다.</p>';
-
-    body.innerHTML = `
-        <div class="detail-header">
-            <h2>${data.title}</h2>
-            <p>${data.subtitle}</p>
-        </div>
-        
-        <!-- Map Container -->
-        <div id="map-container"></div>
-
-        <div class="detail-grid">
-            <div class="timeline-detailed">
-                ${timelineHTML}
-            </div>
-            <div class="cost-summary">
-                <h3>예상 소요 경비 (2인 합계)</h3>
-                <table class="cost-table">
-                    <thead>
-                        <tr><th>항목</th><th>KRW (원)</th></tr>
-                    </thead>
-                    <tbody>
-                        ${costsHTML}
-                        <tr class="total-row">
-                            <td>합계 (약)</td>
-                            <td style="color: var(--primary);">₩${totalKRW.toLocaleString()}</td>
-                            
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="dining-section">
-                    <h3>🍽️ 추천 맛집</h3>
-                    ${diningHTML}
-                </div>
-                <small style="display: block; margin-top: 15px;">* 쇼핑 및 숙박비 제외 순수 활동비 기준 (2인 합계)</small>
-            </div>
-        </div>
+      </div>
     `;
-    
-    modal.style.display = "block";
-    document.body.style.overflow = "hidden";
+  }).join('');
 
-    // Initialize Map after modal is visible
-    setTimeout(() => initMap(data.coords), 100);
+  const costsHTML = data.costs.map((cost) => `
+    <tr>
+      <td>${cost.item}</td>
+      <td style="color: var(--secondary); font-weight: 700;">${cost.krw}</td>
+    </tr>
+  `).join('');
+
+  const diningHTML = data.dining.map((d) => `
+    <div class="restaurant-item">
+      <strong>${d.name} <small>(${d.type})</small></strong>
+      <p>${d.desc}</p>
+    </div>
+  `).join('');
+
+  body.innerHTML = `
+    <div class="detail-header">
+      <h2>${data.title}</h2>
+      <p>${data.subtitle}</p>
+    </div>
+    <div id="map-container"></div>
+    <div class="detail-grid">
+      <div class="timeline-detailed">${timelineHTML}</div>
+      <div class="cost-summary">
+        <h3>예상 소요 경비 (2인 합계)</h3>
+        <table class="cost-table">
+          <thead><tr><th>항목</th><th>KRW</th></tr></thead>
+          <tbody>
+            ${costsHTML}
+            <tr class="total-row">
+              <td>합계</td>
+              <td style="color: var(--primary);">₩${totalKRW.toLocaleString()}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="dining-section">
+          <h3>추천 맛집</h3>
+          ${diningHTML}
+        </div>
+      </div>
+    </div>
+  `;
+
+  modal.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => initMap(data.coords), 100);
 }
 
 function initMap(coords) {
-    if (!coords || coords.length === 0) return;
+  if (!coords || coords.length === 0) return;
+  if (activeMap) activeMap.remove();
 
-    if (activeMap) {
-        activeMap.remove();
-    }
+  activeMap = L.map('map-container').setView([coords[0].lat, coords[0].lon], 13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'OpenStreetMap contributors'
+  }).addTo(activeMap);
 
-    activeMap = L.map('map-container').setView([coords[0].lat, coords[0].lon], 13);
+  const mainColors = ['red', 'green', 'orange', 'violet', 'gold', 'grey'];
+  const hotelColor = 'blue';
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors'
-    }).addTo(activeMap);
+  const latlngs = coords.map((c, idx) => {
+    const isHotel = /Hotel|숙소|호텔|H10/.test(c.name);
+    const color = isHotel ? hotelColor : mainColors[idx % mainColors.length];
 
-    const mainColors = ['red', 'green', 'orange', 'violet', 'gold', 'grey'];
-    const hotelColor = 'blue';
-
-    const latlngs = coords.map((c, idx) => {
-        const hotelKeywords = ["Hotel", "숙소", "호텔", "Cubik", "H10"];
-        const isHotel = hotelKeywords.some(kw => c.name.includes(kw));
-        let color = isHotel ? hotelColor : mainColors[idx % mainColors.length];
-
-        const customIcon = new L.Icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-' + color + '.png',
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-            iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
-        });
-        L.marker([c.lat, c.lon], {icon: customIcon}).addTo(activeMap).bindPopup(`<b>${idx + 1}.</b> ${c.name}`);
-        return [c.lat, c.lon];
+    const customIcon = new L.Icon({
+      iconUrl: `https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-${color}.png`,
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
     });
 
-    const polyline = L.polyline(latlngs, {
-        color: '#d4af37', 
-        weight: 4,
-        opacity: 0.7,
-        dashArray: '10, 10',
-        lineJoin: 'round'
-    }).addTo(activeMap);
+    L.marker([c.lat, c.lon], { icon: customIcon }).addTo(activeMap).bindPopup(`<b>${idx + 1}.</b> ${c.name}`);
+    return [c.lat, c.lon];
+  });
 
-    activeMap.fitBounds(polyline.getBounds(), { padding: [50, 50] });
+  const polyline = L.polyline(latlngs, {
+    color: '#d4af37',
+    weight: 4,
+    opacity: 0.7,
+    dashArray: '10, 10',
+    lineJoin: 'round'
+  }).addTo(activeMap);
+
+  activeMap.fitBounds(polyline.getBounds(), { padding: [50, 50] });
 }
 
 function closeModal() {
-    const modal = document.getElementById('dayModal');
-    modal.style.display = "none";
-    document.body.style.overflow = "auto";
-    if (activeMap) {
-        activeMap.remove();
-        activeMap = null;
-    }
+  const modal = document.getElementById('dayModal');
+  modal.style.display = 'none';
+  document.body.style.overflow = 'auto';
+  if (activeMap) {
+    activeMap.remove();
+    activeMap = null;
+  }
 }
 
-window.onclick = function(event) {
-    const modal = document.getElementById('dayModal');
-    if (event.target == modal) {
-        closeModal();
-    }
-}
+window.onclick = function (event) {
+  const modal = document.getElementById('dayModal');
+  if (event.target === modal) closeModal();
+};
 
 function openFlightSearch() {
-    window.open('https://www.skyscanner.co.kr/transport/flights/icn/bcn/270418/270424/', '_blank');
+  window.open('https://www.skyscanner.co.kr/transport/flights/icn/bcn/270418/270424/', '_blank');
 }
 
 function openHotelSearch() {
-    window.open('https://www.agoda.com/ko-kr/search?city=10282&checkIn=2027-04-18&checkOut=2027-04-24', '_blank');
+  window.open('https://www.agoda.com/ko-kr/search?city=10282&checkIn=2027-04-18&checkOut=2027-04-24', '_blank');
 }
 
-// Countdown Timer to April 18, 2027
 function updateCountdown() {
-    const targetDate = new Date('April 18, 2027 00:00:00').getTime();
-    const now = new Date().getTime();
-    const diff = targetDate - now;
+  const targetDate = new Date('April 18, 2027 00:00:00').getTime();
+  const now = new Date().getTime();
+  const diff = targetDate - now;
 
-    if (diff > 0) {
-        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  if (diff > 0) {
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
 
-        const dEl = document.getElementById('days');
-        const hEl = document.getElementById('hours');
-        const mEl = document.getElementById('minutes');
+    const dEl = document.getElementById('days');
+    const hEl = document.getElementById('hours');
+    const mEl = document.getElementById('minutes');
 
-        if (dEl) dEl.innerText = String(d).padStart(3, '0');
-        if (hEl) hEl.innerText = String(h).padStart(2, '0');
-        if (mEl) mEl.innerText = String(m).padStart(2, '0');
-    }
+    if (dEl) dEl.innerText = String(d).padStart(3, '0');
+    if (hEl) hEl.innerText = String(h).padStart(2, '0');
+    if (mEl) mEl.innerText = String(m).padStart(2, '0');
+  }
 }
 
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// Itinerary Scroll Animation
 const observerOptions = { threshold: 0.1 };
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
 }, observerOptions);
 
-document.querySelectorAll('.itinerary-day').forEach(day => {
-    observer.observe(day);
-});
+document.querySelectorAll('.itinerary-day').forEach((day) => observer.observe(day));
 
-// Weather Toggle Plan B
 function toggleWeather() {
-    const isRaining = document.getElementById('weatherToggle').checked;
-    
-    // Gaudi Day Target (Now Day 3)
-    const gaudiTitle = document.getElementById('gaudi-title');
-    const gaudiDesc = document.getElementById('gaudi-desc');
-    const gaudiCard = document.getElementById('gaudi-card');
-    
-    if (gaudiTitle) {
-        if (isRaining) {
-            gaudiTitle.innerText = "Modernist Indoors";
-            gaudiDesc.innerHTML = "<b>우천 대비 Plan B:</b> 가우디 건축물(사그라다 파밀리아, 카사 바트요) 내부 관람에 집중하고 주변 실내 투어로 대체합니다.";
-            gaudiCard.querySelector('.day-content').style.borderLeft = "4px solid #3498db";
-        } else {
-            gaudiTitle.innerText = "Gaudi's Dream";
-            gaudiDesc.innerHTML = "사그라다 파밀리아와 구엘 공원 집중 투어. 가우디의 상상력이 현실이 된 공간을 탐험합니다.";
-            gaudiCard.querySelector('.day-content').style.borderLeft = "4px solid var(--accent)";
-        }
+  const isRaining = document.getElementById('weatherToggle').checked;
+  const gaudiTitle = document.getElementById('gaudi-title');
+  const gaudiDesc = document.getElementById('gaudi-desc');
+  const montserratTitle = document.getElementById('montserrat-title');
+  const montserratDesc = document.getElementById('montserrat-desc');
+
+  if (gaudiTitle && gaudiDesc) {
+    if (isRaining) {
+      gaudiTitle.innerText = 'Modernist Indoors';
+      gaudiDesc.innerText = '실내 위주로 가우디 건축을 감상하는 플랜 B입니다.';
+    } else {
+      gaudiTitle.innerText = 'Gaudi Day | Sagrada Familia & Eixample';
+      gaudiDesc.innerText = '사그라다 파밀리아와 에이샴플레 중심으로 가우디 핵심 스팟을 둘러봅니다.';
     }
-    
-    // Montserrat Day Target (Now Day 4)
-    const montserratTitle = document.getElementById('montserrat-title');
-    const montserratDesc = document.getElementById('montserrat-desc');
-    const montserratCard = document.getElementById('montserrat-card');
-    
-    if (montserratTitle) {
-        if (isRaining) {
-            montserratTitle.innerText = "Shopping & Museums";
-            montserratDesc.innerHTML = "<b>우천 대비 Plan B:</b> 야외인 몬세라트 대신 실내 복합 문화공간 산 파우 병원과 근거리 쇼핑으로 전환합니다.";
-            montserratCard.querySelector('.day-content').style.borderLeft = "4px solid #3498db";
-        } else {
-            montserratTitle.innerText = "The Sacred Mountain";
-            montserratDesc.innerHTML = "<b>몬세라트(Montserrat)</b> 당일치기. 기괴한 암석 산과 성모 마리아상이 있는 수도원에서 영적인 평온함을 찾습니다.";
-            montserratCard.querySelector('.day-content').style.borderLeft = "4px solid var(--accent)";
-        }
+  }
+
+  if (montserratTitle && montserratDesc) {
+    if (isRaining) {
+      montserratTitle.innerText = 'Shopping & Museums';
+      montserratDesc.innerText = '우천 시 도심 실내 일정 중심으로 대체합니다.';
+    } else {
+      montserratTitle.innerText = 'Day Trip | Montserrat & Sitges';
+      montserratDesc.innerHTML = '<b>몬세라트 & 시체스</b> 차량 투어. 전용 차량으로 편안하게 이동합니다.';
     }
+  }
 }
 
-// Global Map Init
 function initGlobalMap() {
-    const mapContainer = document.getElementById('global-map-container');
-    if (!mapContainer) return;
-    
-    const map = L.map('global-map-container').setView([41.3910, 2.1670], 14); // Central Barcelona
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
+  const mapContainer = document.getElementById('global-map-container');
+  if (!mapContainer) return;
 
-    const locations = [
-        { lat: 41.3879, lon: 2.1731, name: "Base: H10 Cubik", color: "blue" },
-        { lat: 41.4036, lon: 2.1744, name: "Sagrada Familia", color: "red" },
-        { lat: 41.3820, lon: 2.1834, name: "7 Portes (Dining)", color: "green" },
-        { lat: 41.3896, lon: 2.1633, name: "Vinitus (Dining)", color: "orange" }
-    ];
+  const map = L.map('global-map-container').setView([41.3910, 2.1670], 14);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'OpenStreetMap contributors'
+  }).addTo(map);
 
-    locations.forEach(loc => {
-        const customIcon = new L.Icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-' + (loc.color || 'blue') + '.png',
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-            iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
-        });
-        L.marker([loc.lat, loc.lon], {icon: customIcon}).addTo(map).bindPopup(`<b>${loc.name}</b>`);
+  const locations = [
+    { lat: 41.38927937281525, lon: 2.172547428550298, name: 'Base: H10 Urquinaona Plaza Hotel', color: 'blue' },
+    { lat: 41.4036, lon: 2.1744, name: 'Sagrada Familia', color: 'red' },
+    { lat: 41.3820, lon: 2.1834, name: '7 Portes (Dining)', color: 'green' },
+    { lat: 41.3896, lon: 2.1633, name: 'Vinitus (Dining)', color: 'orange' }
+  ];
+
+  locations.forEach((loc) => {
+    const customIcon = new L.Icon({
+      iconUrl: `https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-${loc.color}.png`,
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
     });
+    L.marker([loc.lat, loc.lon], { icon: customIcon }).addTo(map).bindPopup(`<b>${loc.name}</b>`);
+  });
 }
+
 document.addEventListener('DOMContentLoaded', initGlobalMap);
 
-// Hotel Map Init
 function initHotelMap() {
-    const mapContainer = document.getElementById('hotel-map-container');
-    if (!mapContainer) return;
-    
-    // Zoom slightly out to cover both central properties nicely
-    const map = L.map('hotel-map-container').setView([41.3879, 2.1731], 16);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
+  const mapContainer = document.getElementById('hotel-map-container');
+  if (!mapContainer) return;
 
-    const locations = [
-        { lat: 41.3879, lon: 2.1731, name: "H10 Cubik", color: "blue" }
-    ];
+  const map = L.map('hotel-map-container').setView([41.38927937281525, 2.172547428550298], 16);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'OpenStreetMap contributors'
+  }).addTo(map);
 
-    locations.forEach(loc => {
-        const customIcon = new L.Icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-' + loc.color + '.png',
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-            iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41]
-        });
-        L.marker([loc.lat, loc.lon], {icon: customIcon}).addTo(map).bindPopup(`<b>${loc.name}</b>`);
-    });
+  const marker = { lat: 41.38927937281525, lon: 2.172547428550298, name: 'H10 Urquinaona Plaza Hotel', color: 'blue' };
+  const customIcon = new L.Icon({
+    iconUrl: `https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-${marker.color}.png`,
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
+
+  L.marker([marker.lat, marker.lon], { icon: customIcon }).addTo(map).bindPopup(`<b>${marker.name}</b>`);
 }
+
 document.addEventListener('DOMContentLoaded', initHotelMap);
 
-// Budget Customization Toggle
 function updateTotalBudget(checkbox) {
-    const amountSpan = document.getElementById('totalAmountDisplay');
-    if (!amountSpan) return;
-    
-    let currentTotal = parseInt(amountSpan.innerText.replace(/,/g, ''));
-    let val = parseInt(checkbox.value);
-    
-    if (checkbox.checked) {
-        currentTotal += val;
-    } else {
-        currentTotal -= val;
-    }
-    
-    // Animate Number logic (simple version)
-    let finalStr = currentTotal.toLocaleString();
-    amountSpan.innerText = finalStr;
+  const amountSpan = document.getElementById('totalAmountDisplay');
+  if (!amountSpan) return;
+
+  let currentTotal = parseInt(amountSpan.innerText.replace(/,/g, ''), 10);
+  const val = parseInt(checkbox.value, 10);
+
+  if (checkbox.checked) currentTotal += val;
+  else currentTotal -= val;
+
+  amountSpan.innerText = currentTotal.toLocaleString();
 }
+
